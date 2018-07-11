@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_layout" />
+
+    <com.dm.widgets.DMSwipeRefreshLayout
+        android:id="@+id/dmSwipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.dm.widgets.DMListView
+            android:id="@+id/tradeListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:dividerHeight="6dp"
+            android:paddingTop="6dp" />
+    </com.dm.widgets.DMSwipeRefreshLayout>
+
+</LinearLayout>

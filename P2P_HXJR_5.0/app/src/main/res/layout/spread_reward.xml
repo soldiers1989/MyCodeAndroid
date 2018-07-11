@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/invite_ll"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/title_layout"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/content_margin_top"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1.推广码邀请"
+                    android:textColor="@color/text_black_6"
+                    android:textSize="@dimen/text_size_16"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_5"
+                    android:layout_marginTop="@dimen/space_5"
+                    android:text="这是您的专属推广码，请您邀请的好友在注册时输入"
+                    android:textColor="@color/text_black_9"
+                    android:textSize="@dimen/text_size_14"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/my_spread_code_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/space_45"
+                        android:layout_marginTop="@dimen/space_12"
+                        android:background="@drawable/edit_text_bg"
+                        android:gravity="center"
+                        android:textColor="@color/orange"
+                        android:textSize="@dimen/text_size_19"/>
+
+                    <TextView
+                        android:id="@+id/long_click_copy_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/space_45"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/my_spread_code_tv"
+                        android:padding="@dimen/space_5"
+                        android:gravity="center_vertical"
+                        android:text="长按可复制"
+                        android:textColor="@color/text_black_9"
+                        android:textSize="@dimen/text_size_14"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_5"
+                    android:layout_marginTop="@dimen/space_5"
+                    android:text="温馨小提示："
+                    android:textColor="@color/main_color"
+                    android:textSize="@dimen/text_size_12"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_5"
+                    android:text="邀请朋友之前，请您务必实名认证您的账户信息，绑定银行卡，以便于邀请奖励能够顺利到达您的账户，华西金融感谢您的配合与支持。"
+                    android:textColor="@color/text_black_9"
+                    android:textSize="@dimen/text_size_12"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_05"
+                android:layout_marginTop="@dimen/space_10"
+                android:background="@color/line_color"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/content_margin_top"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2.链接邀请"
+                    android:textColor="@color/text_black_6"
+                    android:textSize="@dimen/text_size_16"/>
+
+                <TextView
+                    android:id="@+id/way1_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_5"
+                    android:layout_marginTop="@dimen/space_5"
+                    android:text="方式一："
+                    android:textColor="@color/text_black_9"
+                    android:textSize="@dimen/text_size_12"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_5"
+                    android:layout_marginTop="@dimen/space_5"
+                    android:text="这是您的专属邀请链接，请通过QQ或者邮箱发送给好友"
+                    android:textColor="@color/text_black_9"
+                    android:textSize="@dimen/text_size_14"/>
+
+                <TextView
+                    android:id="@+id/link_invite_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_50"
+                    android:layout_marginTop="@dimen/space_12"
+                    android:background="@drawable/edit_text_bg"
+                    android:padding="@dimen/space_5"
+                    android:textColor="@color/text_black_6"
+                    android:textSize="@dimen/text_size_14"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/share_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/space_10"
+                android:background="@drawable/btn_main_color_big"
+                android:text="分享"
+                android:textColor="@color/White"
+                android:textSize="@dimen/text_size_18"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/content_margin_top"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_5"
+                    android:layout_marginTop="@dimen/space_5"
+                    android:text="邀请好友活动规则："
+                    android:textColor="@color/main_color"
+                    android:textSize="@dimen/text_size_12"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space_5"
+                        android:text="1."
+                        android:textColor="@color/text_black_9"
+                        android:textSize="@dimen/text_size_12"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space_5"
+                        android:text="只有在注册时输入您的邀请码或通过您复制的上述链接完成注册，并且要完成首笔充值（充值下限为2000元），才能被确认为成功邀请。"
+                        android:textColor="@color/text_black_9"
+                        android:textSize="@dimen/text_size_12"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space_5"
+                        android:text="2."
+                        android:textColor="@color/text_black_9"
+                        android:textSize="@dimen/text_size_12"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space_5"
+                        android:text="每成功邀请一位充值成功的客户，您就获得10元奖励，每人每月50人封顶。"
+                        android:textColor="@color/text_black_9"
+                        android:textSize="@dimen/text_size_12"/>
+                </LinearLayout>
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_5"
+                    android:text="3."
+                    android:textColor="@color/text_black_9"
+                    android:textSize="@dimen/text_size_12"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_5"
+                    android:text="您成功邀请的好友单笔出借金额每增加1000元，您即可多获得1元的连续奖励。"
+                    android:textColor="@color/text_black_9"
+                    android:textSize="@dimen/text_size_12"/>
+            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space_5"
+                        android:text="4."
+                        android:textColor="@color/text_black_9"
+                        android:textSize="@dimen/text_size_12"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space_5"
+                        android:text="若发现任何作弊或非法手段获得奖励的，将取消全部返利金额。"
+                        android:textColor="@color/text_black_9"
+                        android:textSize="@dimen/text_size_12"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/way2_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/content_margin_top"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/way2_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space_5"
+                        android:layout_marginTop="@dimen/space_5"
+                        android:text="方式二："
+                        android:textColor="@color/text_black_9"
+                        android:textSize="@dimen/text_size_12"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space_5"
+                        android:layout_marginTop="@dimen/space_5"
+                        android:text="推荐好友扫一扫，快速推广"
+                        android:textColor="@color/text_black_9"
+                        android:textSize="@dimen/text_size_14"/>
+
+                    <ImageView
+                        android:id="@+id/qrImgImageView"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/space_7"
+                        android:layout_marginTop="@dimen/space_7"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_05"
+                    android:background="@color/line_color"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/space_10"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/space_10"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space_5"
+                        android:text="邀请好友活动规则："
+                        android:textColor="@color/text_black_6"
+                        android:textSize="@dimen/text_size_16"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space_5"
+                        android:layout_marginTop="@dimen/space_5"
+                        android:text="1. 只有注册时输入您的邀请码或通过您复制上述链接完成注册，并且完成首笔充值（充值下限为5000元），才能确认为成功邀请"
+                        android:textColor="@color/text_black_9"
+                        android:textSize="@dimen/text_size_14"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space_5"
+                        android:layout_marginTop="@dimen/space_5"
+                        android:text="2. 每成功邀请一位充值成功的客户，您就获得5元奖励，每人每月50人封顶。"
+                        android:textColor="@color/text_black_9"
+                        android:textSize="@dimen/text_size_14"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space_5"
+                        android:layout_marginTop="@dimen/space_5"
+                        android:text="3. 您成功邀请的好友单笔出借金额每增加5000元，您即可多获得10元的连续奖励。"
+                        android:textColor="@color/text_black_9"
+                        android:textSize="@dimen/text_size_14"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space_5"
+                        android:layout_marginTop="@dimen/space_5"
+                        android:text="4. 若发现任何作弊或非法手段获得奖励的，将取消全部返利金额。"
+                        android:textColor="@color/text_black_9"
+                        android:textSize="@dimen/text_size_14"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

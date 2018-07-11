@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <View
+        android:id="@+id/item_top_borther"
+        android:layout_width="match_parent"
+        android:layout_height="0.66dp"
+        android:background="@color/main_list_bother" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_marginTop="@dimen/space_8">
+
+        <ImageView
+            android:id="@+id/bidTypeImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:src="@drawable/icon_gyb" />
+
+        <TextView
+            android:id="@+id/loanName_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@id/bidTypeImg"
+            android:text="捐助山区希望小学"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/text_black_6"
+            android:textSize="@dimen/text_size_14" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_8"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|bottom"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="募捐金额："
+                    android:textColor="@color/text_black_9"
+                    android:textSize="@dimen/text_size_14" />
+
+                <TextView
+                    android:id="@+id/loanAmount_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_8"
+                    android:text="30000.00元"
+                    android:singleLine="true"
+                    android:textColor="@color/orange"
+                    android:textSize="@dimen/text_size_14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_8"
+                android:gravity="center_horizontal|bottom"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="公益机构："
+                    android:textColor="@color/text_black_9"
+                    android:textSize="@dimen/text_size_14" />
+
+                <TextView
+                    android:id="@+id/organisers_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_8"
+                    android:text="深圳红十字公益基金会"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textColor="@color/text_black_6"
+                    android:textSize="@dimen/text_size_14" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.dm.widgets.RoundProgressBar
+            android:id="@+id/progress"
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            app:roundWidth="4dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginBottom="13dp"
+            android:layout_marginRight="13dp"
+            app:progressText="捐助"
+            app:roundColor="@color/roundColor"
+            app:roundProgressColor="@color/main_color"
+            app:textColor="@color/text_black_6"
+            app:textSize="@dimen/text_size_12" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/item_bottom_borther"
+        android:layout_width="match_parent"
+        android:layout_height="0.66dp"
+        android:background="@color/main_list_bother" />
+
+</LinearLayout>

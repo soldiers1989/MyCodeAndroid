@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+	<!-- 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:minHeight="40dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        tools:ignore="UselessParent" >
+
+        <TextView	    	
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="抵押信息："
+            android:textColor="@color/text_black_6"
+            android:textSize="@dimen/text_size_14"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/dy_type"
+            android:textColor="@color/text_black_6"
+            android:textSize="@dimen/text_size_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout> -->
+	<WebView
+	    android:id="@+id/dywWebView"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"/>
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <com.dm.widgets.DMSwipeRefreshLayout
+        android:id="@+id/dmSwipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <com.dm.widgets.DMListView
+            android:id="@+id/weekListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null" 
+            android:cacheColorHint="@color/transparent"
+            android:listSelector="@color/transparent"/>
+    </com.dm.widgets.DMSwipeRefreshLayout>
+
+    <include layout="@layout/net_error_layout" />
+
+</LinearLayout>

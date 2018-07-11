@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <TextView
+                android:id="@+id/no_card_tip"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:text="@string/withdraw_has_no_bankcard"
+                android:textColor="@color/red"
+                android:textSize="@dimen/text_size_12"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/onlyOneCardLab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="16dp"
+                android:text="绑定的银行卡："
+                android:textColor="@color/text_black_3"
+                android:textSize="@dimen/text_size_14"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/bank_listView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/White"
+                android:orientation="vertical" >
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="16dp"
+                android:text="@string/select_recharge_mode"
+                android:textColor="@color/text_black_3"
+                android:textSize="@dimen/text_size_14" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/border_color" />
+
+            <com.dm.widgets.GridLayoutForRadioGroup
+                android:id="@+id/rechage_sel_mode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/White"
+                android:columnCount="2"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="10dp" >
+                <RadioButton
+                    android:id="@+id/one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:button="@drawable/dm_radio_btn"
+                    android:checked="true"
+                    android:drawablePadding="8dp"
+                    android:drawableRight="@drawable/pic_bf"
+                    tools:ignore="UnusedAttribute" />
+
+                <RadioButton
+                    android:id="@+id/two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_margin="5dp"
+                    android:button="@drawable/dm_radio_btn"
+                    android:drawablePadding="8dp"
+                    android:drawableRight="@drawable/pic_hc"
+                    tools:ignore="UnusedAttribute" />
+
+                <RadioButton
+                    android:id="@+id/three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:button="@drawable/dm_radio_btn"
+                    android:drawablePadding="8dp"
+                    android:drawableRight="@drawable/pic_ll"
+                    tools:ignore="UnusedAttribute" />
+
+                <RadioButton
+                    android:id="@+id/four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_margin="5dp"
+                    android:button="@drawable/dm_radio_btn"
+                    android:drawablePadding="8dp"
+                    android:drawableRight="@drawable/pic_sq"
+                    tools:ignore="UnusedAttribute" />
+
+                <RadioButton
+                    android:id="@+id/five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:button="@drawable/dm_radio_btn"
+                    android:checked="true"
+                    android:drawablePadding="8dp"
+                    android:drawableRight="@drawable/pic_tl"
+                    tools:ignore="UnusedAttribute" />
+
+            </com.dm.widgets.GridLayoutForRadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/border_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="20dp"
+                android:text="@string/recharge_edit_hint"
+                android:textColor="@color/text_black_3"
+                android:textSize="@dimen/text_size_14" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin" >
+
+                <EditText
+                    android:id="@+id/amountEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/recharg_input_bg"
+                    android:digits=".012345789"
+                    android:inputType="numberDecimal"
+                    android:maxLength="12"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:textColor="@color/text_black_6"
+                    android:textSize="@dimen/text_size_16" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_marginRight="9dp"
+                    android:text="@string/yuan"
+                    android:textColor="@color/text_black_6"
+                    android:textSize="@dimen/text_size_16" />
+            </FrameLayout>
+
+            <RadioGroup
+                android:id="@+id/rechage_sel_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/amountRadio1"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/recharge_amount_bg"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="2000"
+                    android:textColor="@color/recharge_amount_text_color"
+                    android:textSize="@dimen/text_size_16" />
+
+                <RadioButton
+                    android:id="@+id/amountRadio2"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/recharge_amount_bg"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="1000"
+                    android:textColor="@color/recharge_amount_text_color"
+                    android:textSize="@dimen/text_size_16" />
+
+                <RadioButton
+                    android:id="@+id/amountRadio3"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/recharge_amount_bg"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="500"
+                    android:textColor="@color/recharge_amount_text_color"
+                    android:textSize="@dimen/text_size_16" />
+
+                <RadioButton
+                    android:id="@+id/amountRadio4"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/recharge_amount_bg"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="100"
+                    android:textColor="@color/recharge_amount_text_color"
+                    android:textSize="@dimen/text_size_16" />
+            </RadioGroup>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin" >
+
+                <TextView
+                    android:id="@+id/recharge_fee_lab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:text="@string/recharge_text_fee"
+                    android:textColor="@color/text_black_6"
+                    android:textSize="@dimen/text_size_14" />
+
+                <TextView
+                    android:id="@+id/recharge_fee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/recharge_fee_lab"
+                    android:layout_toRightOf="@id/recharge_fee_lab"
+                    android:text="0.00"
+                    android:textColor="@color/orange"
+                    android:textSize="@dimen/text_size_14" />
+
+                <TextView
+                    android:id="@+id/recharge_income_lab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/recharge_fee_lab"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/recharge_text_amount"
+                    android:textColor="@color/text_black_6"
+                    android:textSize="@dimen/text_size_14" />
+
+                <TextView
+                    android:id="@+id/recharge_income"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/recharge_income_lab"
+                    android:layout_below="@id/recharge_fee_lab"
+                    android:layout_toRightOf="@id/recharge_income_lab"
+                    android:text="0.00"
+                    android:textColor="@color/orange"
+                    android:textSize="@dimen/text_size_14" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btnRecharge"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/btn_main_color_big"
+                android:text="@string/recharge"
+                android:textColor="@color/White"
+                android:textSize="@dimen/text_size_18" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

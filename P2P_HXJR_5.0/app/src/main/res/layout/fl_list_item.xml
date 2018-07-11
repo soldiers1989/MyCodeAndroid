@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/white" >
+
+
+
+        <TextView
+            android:id="@+id/flbidTypeImg"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:layout_below="@id/item_top_borther"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/main_color"
+            android:background="@drawable/flshap_circle" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/flbidTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@id/flbidTypeImg"
+            android:ellipsize="end"
+            android:maxLength="13"
+            android:text="个人周转借款"
+            android:textSize="@dimen/text_size_14" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/flbidTypeImg"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@id/progress"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal" >
+                  <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="年化利率"
+                    android:textColor="@color/text_black_8"
+                    android:textSize="@dimen/text_size_13" />              
+
+                    <TextView
+                        android:id="@+id/flyearRate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="9.50"
+                        android:textColor="@color/orange"
+                        android:textSize="@dimen/text_size_13" />
+
+                    <TextView
+                        android:id="@+id/yearRateUnit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:text="%"
+                        android:textColor="@color/orange"
+                        android:textSize="@dimen/text_size_13" />
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="借款期限"
+                    android:textColor="@color/text_black_8"
+                    android:textSize="@dimen/text_size_13" />
+
+
+                    <TextView
+                        android:id="@+id/flcycle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="8"
+                        android:textColor="@color/orange"
+                        android:textSize="@dimen/text_size_13" />
+
+                    <TextView
+                        android:id="@+id/cycleRateUnit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/flcycle"
+                        android:layout_marginLeft="1dp"
+                        android:layout_toRightOf="@id/flcycle"
+                        android:text="个月"
+                        android:textColor="@color/orange"
+                        android:textSize="@dimen/text_size_13" />
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/item_bottom_borther"
+            android:layout_width="match_parent"
+            android:layout_height="0.66dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/main_list_bother" />
+
+        <ImageView
+            android:id="@+id/progress"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/flbidTypeImg"
+            android:layout_marginRight="21dp"
+            android:background="@drawable/icon_fln" />
+    </RelativeLayout>
+
+</LinearLayout>

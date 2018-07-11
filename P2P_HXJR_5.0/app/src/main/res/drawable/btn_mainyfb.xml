@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item>
+        <shape android:shape="rectangle" >
+            <corners android:radius="2dp" />
+        </shape>
+    </item>
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/btn_main_msqg"
+            />
+    </item>
+       <item>
+           <shape >
+ 	<solid android:color="#50FFFFFF"/>
+           </shape>
+    </item>
+</layer-list>

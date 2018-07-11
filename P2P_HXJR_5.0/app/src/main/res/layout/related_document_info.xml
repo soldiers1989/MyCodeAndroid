@@ -1,0 +1,6 @@
+<com.dm.widgets.TouchWebView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bidInfoWeb"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="horizontal">
+</com.dm.widgets.TouchWebView>

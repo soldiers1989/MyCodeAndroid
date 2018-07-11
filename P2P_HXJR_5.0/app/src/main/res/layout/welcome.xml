@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/welcome_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top" >
+    </android.support.v4.view.ViewPager>
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom|center_horizontal"-->
+        <!--android:layout_marginBottom="20dp"-->
+        <!--android:orientation="horizontal" >-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/loading_point_1"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:padding="5dp"-->
+            <!--android:src="@drawable/page_btn_on"-->
+            <!--tools:ignore="ContentDescription" />-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/loading_point_2"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:padding="5dp"-->
+            <!--android:src="@drawable/page_btn"-->
+            <!--tools:ignore="ContentDescription" />-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/loading_point_3"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:padding="5dp"-->
+            <!--android:src="@drawable/page_btn"-->
+            <!--tools:ignore="ContentDescription" />-->
+
+    <!--</LinearLayout>-->
+    <ImageView 
+        android:id="@+id/closeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_gravity="top|right"
+        android:src="@drawable/icon_close"/>
+</FrameLayout>

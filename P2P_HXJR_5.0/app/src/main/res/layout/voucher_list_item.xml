@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/space_6" >
+
+    <LinearLayout
+        android:id="@+id/lly_money"
+        android:layout_width="85dp"
+        android:layout_height="69dp"
+        android:background="@drawable/pic_jxq2_left"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/tvw_voucher_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2%"
+            android:textColor="@color/White"
+            android:textSize="@dimen/text_size_20" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="69dp"
+        android:layout_weight="1"
+        android:background="@drawable/pic_jxq2_right"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin" >
+
+        <ImageView
+            android:id="@+id/ivw_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true" >
+
+            <TextView
+                android:id="@+id/tvw_form"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvw_requirement"
+                android:layout_marginBottom="@dimen/space_3"
+                android:text="出借赠送"
+                android:textColor="@color/text_black_6"
+                android:textSize="@dimen/text_size_12" />
+
+            <TextView
+                android:id="@+id/tvw_requirement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_3"
+                android:text="满1000可以使用"
+                android:textColor="@color/text_black_6"
+                android:textSize="@dimen/text_size_12" />
+
+            <TextView
+                android:id="@+id/tvw_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvw_form"
+                android:text="过期日期：2015-12-30"
+                android:textColor="@color/text_black_6"
+                android:textSize="@dimen/text_size_12" />
+
+            <TextView
+                android:id="@+id/tvw_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/tvw_time"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/ivw_detail"
+                android:text="去出借"
+                android:textColor="@color/main_color"
+                android:textSize="@dimen/text_size_14" />
+
+            <ImageView
+                android:id="@+id/ivw_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_jt3" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

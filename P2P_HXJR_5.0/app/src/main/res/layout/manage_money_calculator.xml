@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_layout" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_05"
+        android:layout_marginTop="@dimen/content_margin_top" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_12"
+        android:layout_marginRight="@dimen/space_12"
+        android:background="@drawable/edit_text_bg"
+        android:gravity="center_vertical"
+        android:minHeight="49dp"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/space_10"
+        android:paddingRight="@dimen/space_10" >
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="出借金额："
+            android:textColor="@color/edittext_hint_color"
+            android:textSize="@dimen/text_size_16" />
+
+        <EditText
+            android:id="@+id/loan_money_et"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+			android:maxLength="9"
+            android:inputType="number"
+            android:textColor="@color/main_color"
+            android:textSize="@dimen/text_size_16" 
+            android:hint=""
+            android:textColorHint="@color/edittext_hint_color"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_12"
+        android:layout_marginRight="@dimen/space_12"
+        android:layout_marginTop="@dimen/space_12"
+        android:background="@drawable/edit_text_bg"
+        android:gravity="center_vertical"
+        android:minHeight="49dp"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/space_10"
+        android:paddingRight="@dimen/space_10" >
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="年利率："
+            android:textColor="@color/edittext_hint_color"
+            android:textSize="@dimen/text_size_16" />
+
+        <EditText
+            android:id="@+id/year_rate_et"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:inputType="numberDecimal"
+            android:maxLength="5"
+            android:background="@null"
+            android:textColor="@color/main_color"
+            android:textSize="@dimen/text_size_16" 
+            android:hint=""
+            android:textColorHint="@color/edittext_hint_color"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="%"
+            android:textColor="@color/edittext_hint_color"
+            android:textSize="@dimen/text_size_18" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/load_term_arrow_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_12"
+        android:layout_marginRight="@dimen/space_12"
+        android:layout_marginTop="@dimen/space_12"
+        android:background="@drawable/edit_text_bg"
+        android:gravity="center_vertical"
+        android:minHeight="49dp"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/space_10"
+        android:paddingRight="@dimen/space_10" >
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="借款期限："
+            android:textColor="@color/edittext_hint_color"
+            android:textSize="@dimen/text_size_16" />
+
+        <TextView
+            android:id="@+id/loan_term_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:background="@null"
+            android:text=""
+            android:textColor="@color/main_color"
+            android:textSize="@dimen/text_size_16" 
+            android:hint=""
+            android:textColorHint="@color/edittext_hint_color"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_jt3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/load_method_arrow_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_12"
+        android:layout_marginRight="@dimen/space_12"
+        android:layout_marginTop="@dimen/space_12"
+        android:background="@drawable/edit_text_bg"
+        android:gravity="center_vertical"
+        android:minHeight="49dp"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/space_10"
+        android:paddingRight="@dimen/space_10" >
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="还款方式："
+            android:textColor="@color/edittext_hint_color"
+            android:textSize="@dimen/text_size_16" />
+
+        <TextView
+            android:id="@+id/loan_method_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:background="@null"
+            android:text=""
+            android:textColor="@color/main_color"
+            android:textSize="@dimen/text_size_16" 
+            android:hint=""
+            android:textColorHint="@color/edittext_hint_color"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_jt3" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/gotoCalculator_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:background="@drawable/btn_main_color_big"
+        android:text="计算"
+        android:textColor="@color/white" 
+        android:textSize="@dimen/text_size_18"/>
+
+</LinearLayout>

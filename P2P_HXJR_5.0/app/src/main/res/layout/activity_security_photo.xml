@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bank_card_activit_ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_11"
+            android:layout_marginRight="@dimen/space_11"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_15"
+                android:background="@drawable/edit_text_bg">
+
+                <TextView
+                    android:id="@+id/name_tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space_50"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="姓    名："
+                    android:paddingLeft="@dimen/space_10"
+                    android:textColor="@color/text_color_hint"
+                    android:textSize="@dimen/text_size_14"/>
+
+                <EditText
+                    android:id="@+id/name_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_50"
+                    android:layout_toRightOf="@id/name_tv1"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:textColor="@color/text_black_6"
+                    android:textSize="@dimen/text_size_14"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edit_text_bg">
+
+                <TextView
+                    android:id="@+id/open_name_tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space_50"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="身份证号："
+                    android:paddingLeft="@dimen/space_10"
+                    android:textColor="@color/text_color_hint"
+                    android:textSize="@dimen/text_size_14"/>
+
+                <EditText
+                    android:id="@+id/card_number_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_50"
+                    android:layout_toRightOf="@id/open_name_tv2"
+                    android:background="@null"
+                    android:digits="0123456789xX"
+                    android:gravity="center_vertical"
+                    android:maxLength="19"
+                    android:textColor="@color/text_black_6"
+                    android:textSize="@dimen/text_size_14"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <ImageView
+                    android:id="@+id/inversePh"
+                    android:layout_width="200dp"
+                    android:layout_height="125dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/jpg_shchfm"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:scaleType="fitXY"/>
+
+                <ImageView
+                    android:id="@+id/frontPh"
+                    android:layout_width="200dp"
+                    android:layout_height="125dp"
+                    android:layout_alignLeft="@+id/inversePh"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignStart="@+id/inversePh"
+                    android:layout_below="@+id/inversePh"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/jpg_shchzhm"
+                    android:clickable="true"
+                    android:onClick="onClick"
+                    android:scaleType="fitXY"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/submit_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/icon_ljrzh"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:padding="@dimen/space_5"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

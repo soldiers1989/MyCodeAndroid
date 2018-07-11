@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical" >
+
+    <include layout="@layout/title_layout" />
+
+    <com.dm.widgets.ScrollViewContainer
+        android:id="@+id/scrollview_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <ScrollView
+            android:id="@+id/top_myscroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:overScrollMode="never" >
+
+            <include layout="@layout/bid_detail_top" />
+        </ScrollView>
+
+        <com.dm.widgets.MyScrollView
+            android:id="@+id/myscroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:overScrollMode="never" >
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                layout="@layout/bid_detail_bottom" />
+        </com.dm.widgets.MyScrollView>
+    </com.dm.widgets.ScrollViewContainer>
+
+    <!--
+         <TextView
+        android:id="@+id/bottom_view"
+        style="@style/btn_main_big"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/invest_bottom_view_height"
+        android:layout_gravity="bottom"
+        android:background="@color/main_color"
+        android:gravity="center"
+        android:text="马上投资"
+        android:visibility="gone" />
+    -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_05"
+        android:background="@color/main_color" />
+    <LinearLayout
+        android:id="@+id/bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/invest_bottom_view_height"
+        android:layout_gravity="bottom"
+        android:visibility="gone"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/bottom_lc"
+            style="@style/btn_main_biglc"
+            android:layout_height="@dimen/invest_bottom_view_height"
+            android:layout_width="0dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:textColor="@color/main_color"
+            android:text="计算器" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:id="@+id/bottom_tz"
+            style="@style/btn_main_big"
+            android:layout_height="@dimen/invest_bottom_view_height"
+            android:layout_gravity="bottom"
+            android:layout_weight="2"
+            android:background="@color/main_color"
+            android:gravity="center"
+            android:text="去出借" />
+    </LinearLayout>
+
+</LinearLayout>

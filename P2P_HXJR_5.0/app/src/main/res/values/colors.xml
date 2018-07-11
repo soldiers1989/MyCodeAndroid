@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <!-- TOOLS包中-->
+    <!-- 主色调 -->
+    <!--<color name="main_color">#ff34b8fc</color>-->
+    <!-- 头部文字色 -->
+    <!--<color name="main_title_text_color">#ffffff</color>-->
+    <color name="alert_content_text_color">#666666</color>
+    <color name="alert_btn_text_color">#666666</color>
+    <color name="confirm_content_text_color">#666666</color>
+    <color name="confirm_btn_text_color">#666666</color>
+    <color name="prompt_content_text_color">#666666</color>
+    <color name="prompt_btn_text_color">#666666</color>
+    <!--<color name="swipe_color1">#ff4285f4</color>-->
+    <!--<color name="swipe_color2">#fff4b400</color>-->
+    <!--<color name="swipe_color3">#ffdb4437</color>-->
+    <!--<color name="swipe_color4">#ff0f9d58</color>-->
+    <!--<color name="text_black_9">#ff999999</color>-->
+    <!--<color name="white">#ffffff</color>-->
+    <!--<color name="whiteaa">#aaFFFFFF</color>-->
+    <color name="province_line_border">#C7C7C7</color>
+    <!--<color name="text_grey">#aaaaaa</color>-->
+    <!-- 主要的灰色字体  主色调 -->
+    <!-- TOOLS包中-->
+
+    <!-- 需要修改的颜色 -->
+    <color name="main_color">#f95d3c</color><!-- 主色 -->
+    <color name="orange">#ff7011</color><!-- 数字颜色 -->
+    <color name="black_color">#333333</color><!-- 体验标字体颜色 -->
+    <color name="btn_yfb">#34dafc</color><!-- 首页预发布按钮颜色 -->
+    <color name="roundColor">#eaeaea</color><!-- 进度条颜色 -->
+
+
+
+    <color name="white">#FFFFFF</color>
+    <color name="whiteaa">#aaFFFFFF</color>
+    <color name="blue">#ff34b8fc</color>
+    <color name="list_view_divider">#ffececec</color>
+    <color name="top_bg_pressed">#fff3f3f3</color>
+    <color name="top_bar_bg">#fff3f3f3</color>
+    <color name="more_view_divider">#ffe0e0e0</color>
+    <color name="investment_select_line">#ffececec</color>
+    <color name="dm_red">#ffec5741</color>
+    <color name="red">#FF0000</color>
+    <color name="dm_item_blue_bg">#ffd4e5f6</color>
+
+    <color name="text_black_0" tools:ignore="UnusedResources">#ff000000</color>
+    <color name="text_black_3" tools:ignore="UnusedResources">#ff333333</color>
+    <color name="text_black_6">#ff666666</color>
+    <color name="text_black_8">#ff888888</color>
+    <color name="text_black_9" tools:ignore="UnusedResources">#ff999999</color>
+    <color name="progress_1">#e8e8e8</color>
+    <color name="progress_2">#ff6500</color>
+    <color name="progress_3">#ec1f09</color>
+    <color name="text_red">#fffd371a</color>
+    <color name="White">#ffffffff</color>
+    <color name="transparent" tools:ignore="UnusedResources">#00000000</color>
+    <color name="title_bg">#ffeb5841</color>
+    <color name="main_btn_bg">#ffeb5841</color>
+    <color name="footer_btn_text">#ffffffff</color>
+    <color name="bid_detail_title">#ff333333</color>
+
+    <color name="swipe_color1">#ff4285f4</color>
+    <color name="swipe_color2">#fff4b400</color>
+    <color name="swipe_color3">#ffdb4437</color>
+    <color name="swipe_color4">#ff0f9d58</color>
+
+    <color name="link_blue">#ff55a0ff</color>
+    <color name="biao_status">#ff56c9ff</color>
+    <color name="biao_type">#ffaebebe</color>
+    <color name="op_type">#444444</color>
+
+    <!-- 所有界面内容主要背景色 -->
+    <color name="background_bg">#fff8f8f8</color>
+    <!-- 主色调 -->
+    <color name="main_bg">#F8F7F5</color>
+    <!-- 头部文字色 -->
+    <color name="main_title_text_color">#ffffffff</color>
+    <color name="text_color_hint">#dddddd</color>
+    <!-- listview item bother -->
+    <color name="main_list_bother">#e1ddda</color>
+    <color name="my_amount_bg">#dddddd</color>
+    <color name="text_grey">#aaaaaa</color>
+    <color name="line_color">#E1DED9</color>
+    <color name="popup_window_back">#efefef</color>
+
+    <color name="border_color">#e1ddd9</color>
+    <color name="text_orange_color">#ff7011</color>
+    <!-- EditText hint 字体颜色 -->
+    <color name="edittext_hint_color">#cccccc</color>
+
+    <color name="safe_level_back">#ffebebe6</color>  <!-- 安全信息认证安全等级背景色 -->
+    <color name="safe_level_color">@color/main_color</color>  <!-- 安全信息认证安全等级设置颜色 -->
+    <color name="safe_level_low">#ffd322</color>  <!-- 安全信息认证安全等级低 -->
+    <color name="safe_level_mid">#fd9422</color>  <!-- 安全信息认证安全等级中 -->
+    <color name="safe_level_high">#FF0000</color>  <!-- 安全信息认证安全等级高 -->
+    <color name="light_gray">#E6E5E3</color>
+    <color name="text_gray">#ff989898</color>
+
+    <color name="divider_line">#edebe8</color>
+    <color name="sub_title_bg">#e9e9e9</color>
+
+    <color name="back_grey">#ffbbbbbb</color><!-- 日历中显示 -->
+    <color name="calendar_today_color">#FCF8E3</color>
+    <color name="calendar_repayment_color">#3A87AD</color><!-- 还款 -->
+    <color name="calendar_collect_color">#00DD77</color><!-- 收款 -->
+    <color name="noMonth">#c0c0c0</color>
+    <color name="calendar_background">#ffffff</color>
+
+    <color name="gesture_lineColor">@color/main_color</color><!-- 手势密码线的颜色 -->
+    
+</resources>

@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.hxjr.p2p.ad5"
+          android:versionCode="31"
+          android:versionName="1.3.6">
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="25"/>
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <!-- 电话服务添加 -->
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <!-- 访问网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- 访问SD卡权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+
+    <!-- 某些支付插件需要以下权限（如连连支付） -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <!-- BLUETOOTH -->
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+
+    <!-- 阿里移动推送相关权限 -->
+    <!-- Android 6.0版本可去除，用于选举信息（通道复用）的同步 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <!-- 进行网络访问和网络状态监控相关的权限声明 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!-- 允许对sd卡进行读写操作 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- 网络库使用，当网络操作时需要确保事务完成不被杀掉 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <!-- 用于读取手机硬件信息等，用于机型过滤 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!-- 选举使用，当应用有删除或者更新时需要重新选举，复用推送通道 -->
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED"/>
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED"/>
+    <uses-permission android:name="android.permission.RESTART_PACKAGES"/>
+    <!-- 补偿通道小米PUSH使用，不用可去除 -->
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <!-- 补偿通道GCM使用，不使用可去除 -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <!-- 允许监听启动完成事件 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <!-- 允许访问震动器 -->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <!-- 允许task重排序 -->
+    <uses-permission android:name="android.permission.REORDER_TASKS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <application
+        android:name=".DMApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.alibaba.app.appkey"
+            android:value="23557376"/>
+        <meta-data
+            android:name="com.alibaba.app.appsecret"
+            android:value="1db9c079d47ccec6095f6eba34e095e6"/>
+
+        <activity
+            android:name=".ui.SplashActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppStartLoad">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <!-- 微信分享回调 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+
+            <!--
+                 如果集成QQ分享，或者使用QQ客户端来进行QQ空间的分享，须要在此处添加一个对ACTION_VIEW
+            	事件的过滤器，其中的scheme是“tencent”前缀再开发者应用的加上appId。如果此过滤器不设置，
+            	则分享结束以后不能得到正确的回调
+            -->
+            <intent-filter>
+                <data android:scheme="tencent1105257876"/>
+
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+        <!-- app主页 -->
+        <activity
+            android:name=".ui.MainActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 指引页面 -->
+        <activity
+            android:name=".ui.WelcomeActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 设置 -->
+        <activity
+            android:name=".ui.mine.setting.SettingActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 安全信息认证 -->
+        <activity
+            android:name=".ui.mine.setting.SecurityInfoActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 密码管理 -->
+        <activity
+            android:name=".ui.mine.setting.PwdManagerActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 修改交易密码 -->
+        <activity
+            android:name=".ui.mine.setting.ModifyTradePwdActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 找回交易密码 -->
+        <activity
+            android:name=".ui.mine.setting.FindTradePwdActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 设置交易密码 -->
+        <activity
+            android:name=".ui.mine.setting.SetTradePwdActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 设置手势密码 -->
+        <activity
+            android:name=".ui.mine.setting.gesture.SetGesturePasswordActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 解锁手势密码 -->
+        <activity
+            android:name=".ui.mine.setting.gesture.UnlockGesturePasswordActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 修改登录密码 -->
+        <activity
+            android:name=".ui.mine.setting.ModifyLoginPwdActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 设置登录密码 -->
+        <activity
+            android:name=".ui.mine.setting.SetLoginPwdActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 关于APP -->
+        <activity
+            android:name=".ui.mine.setting.AboutActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 站内信息 -->
+        <activity
+            android:name=".ui.mine.letter.LetterInStationActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".ui.mine.letter.ThirdWebPageActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 新手入门 -->
+        <activity
+            android:name=".ui.mine.NewComeListActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 我的投资 -->
+        <activity
+            android:name=".ui.mine.invest.MyInvestMentActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 债权转让 -->
+        <activity
+            android:name=".ui.mine.creditor.CreditorActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 投资详情 -->
+        <activity
+            android:name=".ui.investment.bid.BidDetailActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 投资支付 -->
+        <activity
+            android:name=".ui.investment.bid.BuyBidActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 债权详情 -->
+        <activity
+            android:name=".ui.investment.cre.CreDetailActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 购买转让的债权 -->
+        <activity
+            android:name=".ui.investment.cre.BuyCreActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 交易记录 -->
+        <activity
+            android:name=".ui.mine.trade.TradeRecordActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 银行卡管理 -->
+        <activity
+            android:name=".ui.mine.bank.BankCardManageActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 河北银行第三方注册页面 -->
+        <activity
+            android:name=".ui.mine.bank.BankCardWebActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 银行卡信息 -->
+        <activity
+            android:name=".ui.mine.bank.BankCardInfoActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 添加银行卡 -->
+        <activity
+            android:name=".ui.mine.bank.BankCardActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 我的奖励 -->
+        <activity
+            android:name=".ui.mine.reward.MyRewardActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 体验金列表 -->
+        <activity
+            android:name=".ui.mine.reward.ExperienceListActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 体验金详情 -->
+        <activity
+            android:name=".ui.mine.reward.ExperienceDetailActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 红包 -->
+        <activity
+            android:name=".ui.mine.reward.RedEnvelopeActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 加息券 -->
+        <activity
+            android:name=".ui.mine.reward.VoucherActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 回款日历 -->
+        <activity
+            android:name=".ui.mine.RepaymentCalendarActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 发现 资讯 -->
+        <activity
+            android:name=".ui.discovery.news.NewsActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 资讯详情 -->
+        <activity
+            android:name=".ui.discovery.news.NewsDetailActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 发现 土豪榜 -->
+        <activity
+            android:name=".ui.discovery.rich.RichListActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 理财计算器 -->
+        <activity
+            android:name=".ui.discovery.moneymanage.MoneyManageActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 计算结果 -->
+        <activity
+            android:name=".ui.discovery.moneymanage.CalculatorResultActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 公益捐赠 -->
+        <activity
+            android:name=".ui.discovery.donation.DonationListActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 捐助详情 -->
+        <activity
+            android:name=".ui.discovery.donation.DonationDetailActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 捐助记录 -->
+        <activity
+            android:name=".ui.discovery.donation.DonationRecordActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 捐助投标 -->
+        <activity
+            android:name=".ui.discovery.donation.DonationBidActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 推广有奖 -->
+        <activity
+            android:name=".ui.discovery.spread.SpreadRewardActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 我的推广 -->
+        <activity
+            android:name=".ui.discovery.spread.MySpreadActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 注册 -->
+        <activity
+            android:name=".ui.mine.user.RegisterActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 注册协议 -->
+        <activity
+            android:name=".ui.mine.user.RegisterProtocolActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 登录 -->
+        <activity
+            android:name=".ui.mine.user.LoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 找回密码 -->
+        <activity
+            android:name=".ui.mine.user.FindPwdActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 完善资料 -->
+        <activity
+            android:name=".ui.mine.user.SupplementInfoActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 充值 -->
+        <activity
+            android:name=".ui.mine.RechargeActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 充值 -->
+        <activity
+            android:name=".ui.mine.RechargeWebView"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 我的借款 -->
+        <activity
+            android:name=".ui.mine.loan.MyLoanActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 我的借款详情 -->
+        <activity
+            android:name=".ui.mine.loan.RepaymentDetailActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 提现 -->
+        <activity android:name=".ui.mine.WithdrawActivity"/>
+        <!-- 我的投资 -回款中查看合同 -->
+        <activity
+            android:name=".ui.mine.contract.CheckContractActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 我的债权转让查看合同 -->
+        <activity
+            android:name=".ui.mine.contract.CheckCreContractActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- webView详情页 -->
+        <activity
+            android:name=".ui.home.WebViewActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 公告详情 -->
+        <activity
+            android:name=".ui.home.NoticeActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".ui.investment.bid.ImageViewerActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 托管相关start -->
+        <!-- 没有在第三方托管平台上进行注册 -->
+        <activity
+            android:name=".ui.tg.UnRegisterTgActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 在第三方托管平台上进行注册及其它第三方页面 -->
+        <activity
+            android:name=".ui.tg.TgThirdWebActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 托管充值 -->
+        <activity
+            android:name=".ui.tg.TgRechargeActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 托管相关end -->
+        <!-- 更新服务 -->
+        <service android:name=".service.UpdateService">
+        </service>
+        <!-- 用户名和密码规则服务 -->
+        <service android:name=".service.RegisterInfoService">
+        </service>
+        <!-- 用于登录 -->
+        <service android:name=".service.LoginService">
+        </service>
+
+        <!-- 接收手机网络状态广播 -->
+        <receiver
+            android:name=".receiver.NetWorkReceiver"
+            android:label="NetworkConnection">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <!-- 用于保持会话 -->
+        <receiver
+            android:name=".receiver.UserSessionReceiver"
+            tools:ignore="ExportedReceiver">
+            <intent-filter>
+                <action android:name="com.hxjr.p2p.ad5.action.login_success"/>
+                <action android:name="com.hxjr.p2p.ad5.action.logout_success"/>
+                <action android:name="com.hxjr.p2p.ad5.action.update_cookie"/>
+            </intent-filter>
+        </receiver>
+        <!-- LLYT SDK START（连连支付） -->
+        <activity
+            android:name="com.yintong.secure.activity.BaseActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+
+        <service
+            android:name="com.yintong.secure.service.PayService"
+            android:exported="false">
+        </service>
+        <!-- LLYT SDK END（连连支付） -->
+        <!-- （宝付支付） -->
+        <activity
+            android:name="com.baofoo.sdk.BaofooPayActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false"
+            android:theme="@android:style/Theme.Light.NoTitleBar"/>
+
+        <!-- aliyun -->
+        <!-- 通道保持服务 -->
+        <service
+            android:name="com.alibaba.sdk.android.push.ChannelService"
+            android:exported="true"
+            android:process=":channel">
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.SERVICE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.PING_V4"/>
+
+                <category android:name="taobao"/>
+            </intent-filter>
+        </service>
+        <!-- 消息接收服务 -->
+        <service
+            android:name="com.alibaba.sdk.android.push.MsgService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.RECEIVE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.alibaba.sdk.android.push.NOTIFY_ACTION"/>
+            </intent-filter>
+        </service>
+        <!-- 消息接收增强服务（可提高通知/消息达到率） -->
+        <service
+            android:name="com.alibaba.sdk.android.push.channel.TaobaoRecvService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="org.android.agoo.client.MessageReceiverService"/>
+            </intent-filter>
+        </service>
+        <!-- 消息接收监听器 -->
+        <receiver android:name=".receiver.MyMsgReceiver">
+            <intent-filter>
+                <action android:name="com.alibaba.push2.action.NOTIFICATION_OPENED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.alibaba.push2.action.NOTIFICATION_REMOVED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.COMMAND"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.taobao.taobao.intent.action.COMMAND"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.RECEIVE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- 引导主页 -->
+        <activity
+            android:name=".ui.TextMainActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 引导马上投资 -->
+        <activity
+            android:name=".ui.TextDetilActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 红包界面 -->
+        <activity
+            android:name=".ui.RedPacketActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/dialogstyle">
+        </activity>
+        <!-- 拆红包界面 -->
+        <activity
+            android:name=".ui.ChbActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 投标界面 -->
+        <activity
+            android:name=".ui.BuyTextActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 广告界面 -->
+        <activity
+            android:name=".ui.AdvertiseActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 关于我们界面 -->
+        <activity
+            android:name=".ui.AboutUsActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 身份提示界面 -->
+        <activity
+            android:name=".ui.mine.setting.NoticeActivity"
+            android:theme="@style/dialogstyle">
+        </activity>
+
+        <!-- 身份证信息拍照界面 -->
+        <activity
+            android:name=".ui.mine.setting.TakePhotoActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 身份验证信息提交界面 -->
+        <activity
+            android:name=".ui.mine.setting.SecurityPhotoActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 评估界面 -->
+        <activity
+            android:name=".ui.mine.evaluation.EvaluationActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".ui.mine.bank.ThirdBankCardActivity">
+        </activity>
+        <activity android:name=".ui.mine.setting.TradePwdActivity">
+        </activity>
+        <activity android:name=".ui.mine.RechargeNewActivity">
+        </activity>
+        <activity android:name=".ui.mine.WithdrawWebActivity">
+        </activity>
+        <activity
+            android:name=".ui.UpdateNoticeActivity"
+            android:theme="@style/dialogstyle">
+            >
+        </activity>
+        <activity android:name=".ui.MaintainActivity">
+        </activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.llk.study.activity.PhotoActivity"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths">
+            </meta-data>
+        </provider>
+        <provider
+            android:name=".utils.UpdataFileProvider"
+            android:authorities="com.hxjr.p2p.ad5.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+
+        <activity android:name=".ui.mine.setting.TakePhotoNewActivity">
+        </activity>
+        <activity android:name=".ui.mine.RechargeNewsActivity">
+        </activity>
+        <activity android:name=".ui.OperationActivity">
+        </activity>
+        <activity android:name=".ui.mine.bank.PayNumActivity">
+        </activity>
+    </application>
+
+</manifest>

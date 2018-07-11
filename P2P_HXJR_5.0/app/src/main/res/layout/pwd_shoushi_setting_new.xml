@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+	<include layout="@layout/title_layout" />
+    <TextView
+        android:id="@+id/gesturepwd_create_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"        
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center_horizontal"
+        android:text="绘制解锁图案"
+        android:textSize="@dimen/text_size_17"
+        android:textColor="@color/text_black_6"
+        tools:ignore="HardcodedText" />
+
+    <com.dm.widgets.LockPatternView
+        android:id="@+id/gesturepwd_create_lockview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:line="@color/gesture_lineColor"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp" />
+</LinearLayout>

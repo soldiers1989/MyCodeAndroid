@@ -1,0 +1,799 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+    <include
+        android:id="@+id/main_title"
+        layout="@layout/title_layout" />
+
+    <com.dm.widgets.DMSwipeRefreshLayout
+        android:id="@+id/id_swipe_ly"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/main_title" >
+
+        <ScrollView
+            android:id="@+id/my_fragment_scrollview"
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin" >
+
+                    <TextView
+                        android:id="@+id/account_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="99"
+                        android:text="@string/account_hello"
+                        android:textColor="@color/text_black_9"
+                        android:textSize="@dimen/text_size_13" />
+
+                    <LinearLayout
+                        android:id="@+id/securityInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:id="@+id/icon_user"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_user01_"
+                            tools:ignore="contentDescription" />
+
+                        <ImageView
+                            android:id="@+id/icon_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_user02_"
+                            tools:ignore="contentDescription" />
+
+                        <ImageView
+                            android:id="@+id/icon_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_user03_"
+                            tools:ignore="contentDescription" />
+
+                        <ImageView
+                            android:id="@+id/icon_trad_pwd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_user04_"
+                            tools:ignore="contentDescription" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:src="@drawable/icon_jt3"
+                            tools:ignore="contentDescription" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@color/main_color"
+                    android:visibility="visible" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="8dp"
+                        android:drawableLeft="@drawable/icon_38"
+                        android:drawablePadding="1dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/account_bid_total_income"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <TextView
+                        android:id="@+id/income_in_invest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="40dp"
+                        android:text="0.00"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/text_size_39" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/assets_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@color/main_color"
+                    android:orientation="horizontal"
+                    android:visibility="visible" >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/total_asset_in_invest"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0.00"
+                                android:textColor="@color/White"
+                                android:textSize="@dimen/text_size_14" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="@string/account_total_bid"
+                                android:textColor="@color/White"
+                                android:textSize="@dimen/text_size_14" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/freeze_money_in_invest"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0.00"
+                                android:textColor="@color/White"
+                                android:textSize="@dimen/text_size_14" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="@string/account_freeze_money"
+                                android:textColor="@color/White"
+                                android:textSize="@dimen/text_size_14" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/available_balance_in_invest"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0.00"
+                                android:textColor="@color/White"
+                                android:textSize="@dimen/text_size_14" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="@string/account_available_balance"
+                                android:textColor="@color/White"
+                                android:textSize="@dimen/text_size_14" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/loan_liabilities_in_invest"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0.00"
+                                android:textColor="@color/White"
+                                android:textSize="@dimen/text_size_14" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="@string/account_loan_liabilities"
+                                android:textColor="@color/White"
+                                android:textSize="@dimen/text_size_14" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/main_color"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/main_color"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/money_in_invest_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/account_in_bid_money"
+                            android:textColor="@color/White"
+                            android:textSize="@dimen/text_size_14" />
+
+                        <TextView
+                            android:id="@+id/money_in_invest"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/White"
+                            android:textSize="@dimen/text_size_14" />
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/img"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@color/transparent"
+                        android:contentDescription="@null"
+                        android:src="@drawable/icon_m_jt2" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line_color"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/repayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:src="@drawable/icon_user2"
+                        tools:ignore="contentDescription" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="99"
+                        android:text="@string/account_return_money"
+                        android:textColor="@color/text_black_6"
+                        android:textSize="@dimen/text_size_15" />
+
+                    <TextView
+                        android:id="@+id/repayment_money_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="100.08"
+                        android:textColor="@color/main_color"
+                        android:textSize="@dimen/text_size_15" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:src="@drawable/icon_jt3"
+                        tools:ignore="contentDescription" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line_color" />
+
+                <!--
+                <RelativeLayout
+                    android:id="@+id/experience"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp" >
+
+                    <ImageView
+                        android:id="@+id/experience_image_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:src="@drawable/icon_user1"
+                        tools:ignore="contentDescription" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:layout_toRightOf="@id/experience_image_one"
+                        android:text="@string/account_experience"
+                        android:textColor="@color/text_black_6"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/experience_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:src="@drawable/arrow"
+                        tools:ignore="contentDescription" />
+
+                    <TextView
+                        android:id="@+id/experince_used_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@id/experience_image"
+                        android:gravity="bottom"
+                        android:text="@string/account_experience_has_used"
+                        android:textColor="@color/main_color"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/experience_money_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@id/experience_image"
+                        android:text=""
+                        android:textColor="@color/main_color"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingBottom="7dp"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:paddingTop="7dp" >
+
+                    <Button
+                        android:id="@+id/my_recharge_btn"
+                        style="@style/btn_main_big"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="6dp"
+                        android:layout_weight="1"
+                        android:text="@string/recharge" />
+
+                    <Button
+                        android:id="@+id/withdraw"
+                        style="@style/btn_blue_big"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="6dp"
+                        android:layout_weight="1"
+                        android:text="@string/withdraw" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line_color" />
+
+                <TextView
+                    android:id="@+id/my_reward"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:drawableLeft="@drawable/icon_27"
+                    android:drawablePadding="8dp"
+                    android:drawableRight="@drawable/icon_jt3"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:text="@string/account_my_reward"
+                    android:textColor="@color/text_black_6"
+                    android:textSize="@dimen/text_size_15" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line_color" />
+
+                <!--
+                     <TextView
+                    android:id="@+id/myScore"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:drawableLeft="@drawable/icon_user3"
+                    android:drawablePadding="8dp"
+                    android:drawableRight="@drawable/arrow"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:text="@string/account_my_score"
+                    android:textColor="@color/text_black_6"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line_color" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                -->
+
+                <TextView
+                    android:id="@+id/my_bid_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:drawableLeft="@drawable/icon_user4"
+                    android:drawablePadding="8dp"
+                    android:drawableRight="@drawable/icon_jt3"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:text="@string/account_my_bid"
+                    android:textColor="@color/text_black_6"
+                    android:textSize="@dimen/text_size_15" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line_color" />
+
+                <TextView
+                    android:id="@+id/creditor_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:drawableLeft="@drawable/icon_user5"
+                    android:drawablePadding="8dp"
+                    android:drawableRight="@drawable/icon_jt3"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:text="@string/account_creditor_right"
+                    android:textColor="@color/text_black_6"
+                    android:textSize="@dimen/text_size_15" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line_color" />
+
+                <!--
+                     <TextView
+                    android:id="@+id/my_collect_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:drawableLeft="@drawable/icon_user6"
+                    android:drawablePadding="8dp"
+                    android:drawableRight="@drawable/arrow"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:text="@string/account_my_collect"
+                    android:textColor="@color/text_black_6"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line_color" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                -->
+
+                <TextView
+                    android:id="@+id/trade_record_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:drawableLeft="@drawable/icon_user7"
+                    android:drawablePadding="8dp"
+                    android:drawableRight="@drawable/icon_jt3"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:text="@string/account_deal_record"
+                    android:textColor="@color/text_black_6"
+                    android:textSize="@dimen/text_size_15" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line_color" />
+
+                <TextView
+                    android:id="@+id/my_loan_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:drawableLeft="@drawable/icon_user8"
+                    android:drawablePadding="8dp"
+                    android:drawableRight="@drawable/icon_jt3"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:text="@string/account_my_loan"
+                    android:textColor="@color/text_black_6"
+                    android:textSize="@dimen/text_size_15" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line_color" />
+
+                <TextView
+                    android:id="@+id/account_bank_card_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:drawableLeft="@drawable/icon_user9"
+                    android:drawablePadding="8dp"
+                    android:drawableRight="@drawable/icon_jt3"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:text="@string/account_bank_card_manage"
+                    android:textColor="@color/text_black_6"
+                    android:textSize="@dimen/text_size_15" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line_color" />
+
+                <!--
+                     <TextView
+                    android:id="@+id/account_news_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:drawableLeft="@drawable/icon_user10"
+                    android:drawablePadding="8dp"
+                    android:drawableRight="@drawable/arrow"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:text="@string/account_news"
+                    android:textColor="@color/text_black_6"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line_color" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                -->
+
+                <RelativeLayout
+                    android:id="@+id/account_risk_evaluation_lv"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/account_risk_evaluation_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="47dp"
+                        android:drawableLeft="@drawable/icon_fxpg"
+                        android:drawablePadding="8dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_horizontal_margin"
+                        android:text="@string/account_risk_evaluation"
+                        android:textColor="@color/text_black_6"
+                        android:textSize="@dimen/text_size_15" />
+
+                    <TextView
+                        android:id="@+id/evaluation_result"
+                        android:layout_width="wrap_content"
+                        android:layout_height="47dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_toLeftOf="@+id/evaluation_textback"
+                        android:gravity="center"
+                        android:paddingRight="@dimen/activity_horizontal_margin"
+                        android:text="@string/account_evaluation"
+                        android:textColor="@color/red" />
+
+                    <TextView
+                        android:id="@+id/evaluation_textback"
+                        android:layout_width="wrap_content"
+                        android:layout_height="47dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:drawableRight="@drawable/icon_jt3"
+                        android:gravity="center_vertical"
+                        android:paddingRight="@dimen/activity_horizontal_margin" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line_color" />
+
+                <RelativeLayout
+                    android:id="@+id/account_letter_in_station_lv"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/account_letter_in_station_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="47dp"
+                        android:drawablePadding="8dp"
+                        android:drawableLeft="@drawable/icon_user11"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_horizontal_margin"
+                        android:text="@string/account_letter_in_station"
+                        android:textColor="@color/text_black_6"
+                        android:textSize="@dimen/text_size_15" />
+
+                    <TextView
+                        android:id="@+id/red_text"
+                        android:layout_width="50dp"
+                        android:layout_height="47dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_toLeftOf="@+id/red_textback"
+                        android:gravity="center_vertical"
+                        android:paddingRight="@dimen/activity_horizontal_margin" />
+
+                    <TextView
+                        android:id="@+id/red_textback"
+                        android:layout_width="wrap_content"
+                        android:layout_height="47dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:drawableRight="@drawable/icon_jt3"
+                        android:gravity="center_vertical"
+                        android:paddingRight="@dimen/activity_horizontal_margin" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line_color" />
+
+                <TextView
+                    android:id="@+id/account_newcomer"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:drawableLeft="@drawable/icon_user12"
+                    android:drawablePadding="8dp"
+                    android:drawableRight="@drawable/icon_jt3"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:text="@string/account_newcomer_bigin"
+                    android:textColor="@color/text_black_6"
+                    android:textSize="@dimen/text_size_15" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line_color" />
+
+                <TextView
+                    android:id="@+id/setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:drawableLeft="@drawable/icon_user13"
+                    android:drawablePadding="8dp"
+                    android:drawableRight="@drawable/icon_jt3"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:text="@string/account_setting"
+                    android:textColor="@color/text_black_6"
+                    android:textSize="@dimen/text_size_15" />
+            </LinearLayout>
+        </ScrollView>
+    </com.dm.widgets.DMSwipeRefreshLayout>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/main_title"
+        layout="@layout/net_error_layout"
+        android:visibility="gone" />
+
+</RelativeLayout>

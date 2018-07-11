@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal" >
+        
+        <FrameLayout
+            android:id="@+id/creditor_turn_ining_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white" >
+
+            <TextView
+                android:id="@+id/creditor_turn_ining_txt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/creditor_turn_ining"
+                android:textColor="@color/main_color"
+                android:textSize="@dimen/text_size_16" />
+
+            <View
+                android:id="@+id/creditor_turn_ining_line"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_gravity="bottom"
+                android:background="@color/main_color" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/creditor_turn_out_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white" >
+
+            <TextView
+                android:id="@+id/creditor_turn_out_txt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/creditor_turn_out"
+                android:textColor="#ff666666"
+                android:textSize="@dimen/text_size_16" />
+
+            <View
+                android:id="@+id/creditor_turn_out_line"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_gravity="bottom"
+                android:background="@color/light_gray" />
+        </FrameLayout>
+        
+         <FrameLayout
+            android:id="@+id/creditor_turn_in_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white" >
+
+            <TextView
+                android:id="@+id/creditor_turn_in_txt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/creditor_turn_in"
+                android:textColor="#ff666666"
+                android:textSize="@dimen/text_size_16" />
+
+            <View
+                android:id="@+id/creditor_turn_in_line"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_gravity="bottom"
+                android:background="@color/light_gray" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/creditor_turn_out_in_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_layout" />
+
+    <View
+        android:id="@+id/my_reward_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_05"
+        android:layout_marginTop="@dimen/space_20"
+        android:background="@color/line_color" />
+
+    <RelativeLayout
+        android:id="@+id/experience_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_47" >
+
+        <ImageView
+            android:id="@+id/experience_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:src="@drawable/icon_35"
+            tools:ignore="contentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/space_12"
+            android:layout_toRightOf="@id/experience_image"
+            android:text="@string/my_reward_experience"
+            android:textColor="@color/text_black_6"
+            android:textSize="@dimen/text_size_15" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:src="@drawable/icon_jt3"
+            tools:ignore="contentDescription" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/space_28"
+            android:layout_toLeftOf="@id/experience_image"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/experience_money_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/orange"
+                android:textSize="@dimen/text_size_15" />
+
+            <TextView
+                android:id="@+id/experience_unit_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="元"
+                android:textColor="@color/text_black_6"
+                android:textSize="@dimen/text_size_15" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_05"
+        android:layout_marginLeft="@dimen/space_40"
+        android:background="@color/line_color" />
+
+    <RelativeLayout
+        android:id="@+id/red_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_47" >
+
+        <ImageView
+            android:id="@+id/red_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:src="@drawable/icon_36"
+            tools:ignore="contentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/space_12"
+            android:layout_toRightOf="@id/red_image"
+            android:text="@string/my_reward_red"
+            android:textColor="@color/text_black_6"
+            android:textSize="@dimen/text_size_15" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:src="@drawable/icon_jt3"
+            tools:ignore="contentDescription" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/space_28"
+            android:layout_toLeftOf="@id/red_image"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/red_num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/orange"
+                android:textSize="@dimen/text_size_15" />
+
+            <TextView
+                android:id="@+id/red_unit_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="个"
+                android:textColor="@color/text_black_6"
+                android:textSize="@dimen/text_size_15" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_05"
+        android:layout_marginLeft="@dimen/space_40"
+        android:background="@color/line_color" />
+
+    <RelativeLayout
+        android:id="@+id/voucher_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_47" >
+
+        <ImageView
+            android:id="@+id/voucher_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:src="@drawable/icon_37"
+            tools:ignore="contentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/space_12"
+            android:layout_toRightOf="@id/voucher_image"
+            android:text="@string/my_reward_raised_rate_voucher"
+            android:textColor="@color/text_black_6"
+            android:textSize="@dimen/text_size_15" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:src="@drawable/icon_jt3"
+            tools:ignore="contentDescription" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/space_28"
+            android:layout_toLeftOf="@id/voucher_image"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/voucher_num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/orange"
+                android:textSize="@dimen/text_size_15" />
+
+            <TextView
+                android:id="@+id/voucher_unit_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="张"
+                android:textColor="@color/text_black_6"
+                android:textSize="@dimen/text_size_15" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_05"
+        android:background="@color/line_color" />
+
+</LinearLayout>

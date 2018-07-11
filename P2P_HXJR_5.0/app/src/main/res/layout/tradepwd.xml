@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/title_layout"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_05"
+        android:layout_marginTop="@dimen/content_margin_top"
+        android:background="@color/line_color"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_05"
+        android:background="@color/line_color"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_15"
+        android:background="@drawable/edit_text_bg">
+
+        <TextView
+            android:id="@+id/open_name"
+            android:layout_width="@dimen/space_80"
+            android:layout_height="@dimen/space_50"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="@string/bank_card_add_username"
+            android:paddingLeft="@dimen/space_15"
+            android:textColor="@color/text_color_hint"
+            android:textSize="@dimen/text_size_16"/>
+
+        <EditText
+            android:id="@+id/user_name_et"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_50"
+            android:layout_toRightOf="@id/open_name"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/text_black_6"
+            android:textSize="@dimen/text_size_16"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_15"
+        android:background="@drawable/edit_text_bg">
+
+        <TextView
+            android:id="@+id/idcard_num"
+            android:layout_width="@dimen/space_80"
+            android:layout_height="@dimen/space_50"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="@string/bank_idcardnum"
+            android:paddingLeft="@dimen/space_15"
+            android:textColor="@color/text_color_hint"
+            android:textSize="@dimen/text_size_16"/>
+
+        <EditText
+            android:id="@+id/idcard_num_et"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_50"
+            android:layout_toRightOf="@id/idcard_num"
+            android:background="@null"
+            android:digits="0123456789xX"
+            android:gravity="center_vertical"
+            android:maxLength="19"
+            android:singleLine="true"
+            android:textColor="@color/text_black_6"
+            android:textSize="@dimen/text_size_16"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_15"
+        android:background="@drawable/edit_text_bg">
+
+        <TextView
+            android:id="@+id/phoneNum"
+            android:layout_width="@dimen/space_80"
+            android:layout_height="@dimen/space_50"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="@string/bank_phoneNum"
+            android:paddingLeft="@dimen/space_15"
+            android:textColor="@color/text_color_hint"
+            android:textSize="@dimen/text_size_16"/>
+
+        <EditText
+            android:id="@+id/phoneNum_et"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_50"
+            android:layout_toRightOf="@id/phoneNum"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:inputType="number"
+            android:maxLength="11"
+            android:singleLine="true"
+            android:textColor="@color/text_black_6"
+            android:textSize="@dimen/text_size_16"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/verify_code"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edit_text_height"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/icon_21"
+            android:drawablePadding="5dp"
+            android:hint="@string/pwd_manager_input_code"
+            android:inputType="number"
+            android:maxLength="6"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textColorHint="@color/edittext_hint_color"
+            android:textSize="@dimen/text_size_16"/>
+
+        <Button
+            android:id="@+id/get_code_btn"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/btn_verify_status"
+            android:onClick="getVerifyCode"
+            android:text="@string/pwd_manager_get_code"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_14"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_05"
+        android:background="@color/line_color"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/sub_btn"
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:layout_centerInParent="true"
+            android:background="@color/main_color"
+            android:onClick="next"
+            android:text="@string/next"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_18"/>
+    </RelativeLayout>
+</LinearLayout>

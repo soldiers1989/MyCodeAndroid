@@ -1,0 +1,809 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--<string name="app_name">华西金融</string>-->
+    <!-- TOOLS包中-->
+    <!--<string name="confirm">确认</string>-->
+    <string name="sure">确定</string>
+    <!--<string name="main_title">迪蒙网贷</string>-->
+    <string name="lockscreen_access_pattern_start">"开始绘制图案"</string>
+    <string name="lockscreen_access_pattern_cleared">"图案已清除"</string>
+    <string name="lockscreen_access_pattern_cell_added">"已添加单元格"</string>
+    <string name="lockscreen_access_pattern_detected">"图案绘制完成"</string>
+    <string name="lockpattern_retry_button_text">"重试"</string>
+    <string name="lockpattern_continue_button_text">"继续"</string>
+    <string name="lockpattern_confirm_button_text">"确认"</string>
+    <string name="lockpattern_recording_intro_header">"绘制解锁图案"</string>
+    <string name="lockpattern_settings_help_how_to_record">"如何绘制解锁图案"</string>
+    <string name="lockpattern_recording_incorrect_too_short">"至少连接4个点，请重试"</string>
+    <string name="lockpattern_pattern_entered_header">"图案已记录"</string>
+    <string name="lockpattern_need_to_confirm">"请再次绘制解锁图案"</string>
+    <string name="lockpattern_need_to_unlock_wrong">"与上次输入不一致，请重试"</string>
+    <string name="lockpattern_pattern_confirmed_header">"确认保存新解锁图案"</string>
+    <string name="lockpattern_recording_inprogress">"完成后松开手指"</string>
+    <string name="more_data">更多</string>
+    <string name="no_data_to_load">亲，没有数据可供加载</string>
+    <string name="data_loading">加载中&#8230;</string>
+
+    <!-- 下拉刷新，上拉加载 -->
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_last_time">上次刷新时间:</string>
+    <string name="xlistview_header_hint_loading">正在加载..</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_footer_hint_ready">点击查看更多</string>
+    <string name="xlistview_footer_hint_normal">点击查看更多</string>
+    <!-- TOOLS包中-->
+    <string name="app_name">华西金融</string>
+    <string name="action_settings" tools:ignore="UnusedResources">Settings</string>
+
+    <string name="main_title">华西金融</string>
+    <string name="investment_xmlb">借款项目</string>
+    <string name="investment_zqzr">债权转让</string>
+    <string name="home_notice">公告详情</string>
+    <!-- other -->
+    <string name="recharge_zxcz">在线充值</string>
+    <string name="recharge_yhzz">银行转账(推荐)</string>
+    <string name="other_about_us">关于我们</string>
+    <!-- maintain -->
+    <string name="maintain">服务器维护</string>
+    <!-- 新人专享 -->
+    <string name="xinrenzhuanxiang">新人专享</string>
+    <string name="tuijianyoujiang">推荐有奖</string>
+    <string name="xinrencontext">注册即得体验金</string>
+    <string name="tuijiancontext">邀请好友注册成功可得现金红包</string>
+    <!-- 登录 -->
+    <string name="login">登录</string>
+    <string name="register_login">立即登录</string>
+    <string name="user_name_hint">请输入用户名/手机号码/邮箱</string>
+    <string name="user_pwd_hint">请输入密码</string>
+    <string name="user_vercode_hint">验证码</string>
+    <string name="vercode_hint">验&#8194;证&#8194;码：</string>
+    <string name="bank_num">银行卡卡号：</string>
+    <string name="user_remember_pwd">记住密码</string>
+    <string name="user_forget_pwd">忘记密码</string>
+    <string name="use_other_login">其它方式登录</string>
+    <string name="login_name_error" tools:ignore="UnusedResources">用户名格式错误</string>
+    <string name="login_name_error_detail" tools:ignore="UnusedResources">用户名由6&#8211;18个字母或数字组合</string>
+    <string name="login_pwd_error">密码格式错误</string>
+    <string name="login_pwd_error_detail">密码由6&#8211;20个字符组成</string>
+    <string name="login_ver_error">验证码格式错误</string>
+    <string name="login_ver_error_detail">验证码不能为空</string>
+    <string name="login_forget_toast" tools:ignore="UnusedResources">请访问WEB版功能找回您的密码！</string>
+    <string name="qq">QQ</string>
+    <string name="sina_weibo">微博</string>
+    <string name="auth_cancel">授权操作已取消</string>
+    <string name="auth_error">授权操作遇到错误，请阅读Logcat输出; \n 如微信登录，需要微信客户端</string>
+    <string name="auth_complete">授权成功，正在跳转登录操作…</string>
+    <!-- 注册 -->
+    <string name="register">免费注册</string>
+    <string name="register_name_hint">请输入用户名</string>
+    <string name="register_pwd_hint">请输入密码</string>
+    <string name="register_repwd_hint">请再次输入密码</string>
+    <string name="register_yaoqing_hint">邀请码/推广人手机号码/业务员工号，有则填</string>
+    <string name="register_vercode_hint">验证码</string>
+    <string name="register_agreen">我已阅读并同意</string>
+    <string name="register_dm_zcxy">《迪蒙网贷注册协议》</string>
+    <string name="register_phone_hint">请输入手机号</string>
+    <string name="register_vevify_hint">请输入验证码</string>
+    <string name="register_agreement">《迪蒙网贷平台服务条款》</string>
+    <string name="register_name_desc">6&#8211;18个字符，可使用字母、数字、下划线，需以字母开头</string>
+    <string name="register_pwd_desc">6&#8211;20个字符，区分大小写</string>
+    <string name="register_name_error">用户名格式错误</string>
+    <string name="register_name_error_detail">用户名由6&#8211;18个字母或数字组合</string>
+    <string name="register_pwd_error">密码格式错误</string>
+    <string name="register_pwd_error_detail">密码由6&#8211;20个字符</string>
+    <string name="register_repwd_error">密码和确认密码不一致</string>
+    <string name="register_zcxy">注册协议</string>
+    <string name="has_account">已有账号</string>
+    <string name="no_account">没有账号</string>
+    <string name="get_verify_code">获取验证码</string>
+    <string name="supplement_info">完善资料</string>
+    <string name="supplement_error1">用户名不能为空！</string>
+    <string name="supplement_error2">用户名6&#8211;18个字符，可使用字母、数字、下划线，需以字母开头！</string>
+    <string name="supplement_error3">密码不能为空！</string>
+    <string name="supplement_error4">登录密码6&#8211;18个字符，至少包含数字、大写字母、小写字母、符号中的2种</string>
+    <string name="supplement_error5">两次密码输入不一致！</string>
+    <string name="supplement_pwd_format_error">密码格式不正确，或密码不能为空！</string>
+    <string name="register_username_input">1234567890.+-*/%_$@?~#!\n()ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz</string>
+
+    <!-- 我的账户信息 -->
+    <string name="account_evaluation">未评估</string>
+    <string name="account_risk_evaluation">风险评估</string>
+    <string name="account_savelvl2">安全等级</string>
+    <string name="account_savelvl_low">低</string>
+    <string name="account_savelvl_mid">中</string>
+    <string name="account_savelvl_hight">高</string>
+    <string name="account_totalobtain">已赚总金额</string>
+    <string name="account_canuse_amount">可用余额</string>
+    <string name="account_fronzen">冻结金额</string>
+    <string name="account_jingzc">账户净资产</string>
+    <string name="account_touzizc">出借资产 </string>
+    <string name="account_jiekuanfz">借款负债  </string>
+    <string name="account_daihuanjiner">待还总金额</string>
+    <string name="account_userinfotitle">个人基础信息</string>
+    <string name="account_shimingrenzheng">实名认证</string>
+    <string name="account_xingmingtip">请输入真实姓名</string>
+    <string name="account_shenfenzhanghao" tools:ignore="UnusedResources">身份证号</string>
+    <string name="account_shenfenzhangtip">请输入身份证号</string>
+    <string name="account_submit">提交</string>
+    <string name="account_bindemail">绑定邮箱</string>
+    <string name="account_normalemail" tools:ignore="UnusedResources">常用邮箱</string>
+    <string name="account_emailtip">请输入常用邮箱</string>
+    <string name="account_yanzhengma">验证码</string>
+    <string name="account_yanzhengmatip" tools:ignore="UnusedResources">请输入验证码</string>
+    <string name="account_getyanzhengma">获取验证码</string>
+    <string name="account_bindphone">绑定手机</string>
+    <string name="account_phonenum" tools:ignore="UnusedResources">手机号码</string>
+    <string name="mobile_vercode">手机验证码</string>
+    <string name="account_phonenumtip">请输入手机号码</string>
+    <string name="account_id_vi">认证</string>
+    <string name="account_email_bind">绑定</string>
+    <string name="account_mobile_bind">绑定</string>
+    <string name="account_id_ok_btn">提交</string>
+    <string name="account_namever_no_name">真实姓名不能为空</string>
+    <string name="account_namever_no_id">身份证号码不能为空</string>
+    <string name="account_smrzcg">实名认证成功</string>
+    <string name="account_emailver_no_email">邮箱地址不能为空</string>
+    <string name="account_emailver_email_format_erro">邮箱地址格式不正确</string>
+    <string name="account_re_yzm">%1$ds后重试</string>
+    <string name="account_yzm_none">验证码不能为空</string>
+    <string name="account_phone_none">手机号码不能为空</string>
+    <string name="account_phone_format_erro">手机号码格式不正确</string>
+    <string name="register_ok_alert">注册成功！为了您的账户安全，请完善安全信息认证！</string>
+    <string name="please_complete_security_info">为了您的资金安全，出借前请完善安全信息认证</string>
+    <string name="please_complete_security_info_recharge">为了您的资金安全，充值前请完善安全信息认证</string>
+    <string name="goto_auth">马上完善</string>
+    <string name="not_goto_auth">先逛逛</string>
+    <string name="available_ammount_not_enough">账户余额不足，请充值后重试！</string>
+    <string name="deal_pwd_err">交易密码不正确，请重试！</string>
+    <string name="deal_pwd_false">您输入的交易密码有误，请确认后重新输入！</string>
+
+    <!-- 交易记录 -->
+    <string name="dealrecord_title">交易记录</string>
+    <string name="dealrecord_all_tab">全部</string>
+    <string name="dealrecord_in_tab">收入</string>
+    <string name="dealrecord_out_tab">支出</string>
+
+    <!-- 我的债权 -->
+    <string name="creditor_title">我的债权</string>
+    <string name="creditor_back_tab">回款中</string>
+    <string name="creditor_doing_tab">投标中</string>
+    <string name="creditor_finish_tab">已结清</string>
+    <string name="creditor_rate_text">年利率</string>
+    <string name="creditor_jindu_text" tools:ignore="UnusedResources">进度</string>
+    <string name="creditor_jindu_text_new">进度：</string>
+    <string name="creditor_finish_date">结清日期</string>
+    <string name="creditor_right_value">债权价值：%1$s</string>
+    <string name="creditor_transfer_rate">转让费率：%1$s</string>
+    <string name="creditor_transfer_success">转让申请提交成功，请耐心等待审核！</string>
+
+    <!-- 我的借款 -->
+    <string name="borrow_title">我的借款</string>
+    <string name="borrow_detail_title">还款详情</string>
+    <string name="borrow_doing_tab">还款中</string>
+    <string name="borrow_finish_tab">已结清</string>
+    <string name="borrow_daihuanjine">待还金额</string>
+    <string name="borrow_daihuankuanri">待还款日</string>
+    <string name="borrow_jiekuanjine">借款金额</string>
+    <string name="borrow_qixian">剩余期数</string>
+    <string name="borrow_qixian_1">期限</string>
+    <string name="borrow_huankuanzonge">还款总额</string>
+    <string name="borrow_huanqingriqi">还清日期</string>
+    <string name="borrow_huankuanriqi">还款日期</string>
+    <string name="borrow_jine">金额</string>
+    <string name="borrow_zhuangtai">状态</string>
+
+    <!-- 标信息 -->
+    <string name="biao_year_rate">年利率</string>
+    <string name="biao_term">期数</string>
+    <string name="biao_benxi">代收本息</string>
+    <string name="biao_nexttime">下个还款日</string>
+    <string name="biao_tzje">投资金额</string>
+    <string name="biao_yzje">已赚金额</string>
+    <string name="biao_jqrq">结清日期</string>
+    <string name="biao_sysj" tools:ignore="UnusedResources">剩余时间</string>
+    <string name="biao_sysj_new">剩余时间：</string>
+
+    <!-- 标的详情 -->
+    <string name="tou_biao_01">投标</string>
+    <string name="tou_biao">购买</string>
+    <string name="bid_nhsy">年化收益</string>
+    <string name="bid_tzqx">出借期限</string>
+    <string name="bid_xmgm">项目规模</string>
+    <string name="bid_syje">剩余金额</string>
+    <string name="bid_fbrq">发布日期</string>
+    <string name="bid_wjrq">完结日期</string>
+    <string name="bid_tzjl">出借记录</string>
+    <string name="bid_xgwj">相关文件</string>
+    <string name="bid_dbjg">担保机构</string>
+    <string name="bid_hkfs">还款方式</string>
+    <string name="bid_sysj">剩余时间</string>
+    <string name="bid_bdxq">标的详情</string>
+    <string name="bid_yzf">融资方</string>
+    <string name="bid_yzje">融资金额</string>
+    <string name="bid_xmqy">项目区域</string>
+    <string name="bid_hkrq">还款日期</string>
+    <string name="bid_nhll">年化利率</string>
+    <string name="bid_tbjzrq">投标截止日期</string>
+    <string name="bid_jkyt">借款用途</string>
+    <string name="bid_hkly">还款来源</string>
+    <string name="bid_jkms">借款描述</string>
+    <string name="bid_qyxx">企业信息</string>
+    <string name="bid_zcnx">注册年限</string>
+    <string name="bid_zczj">注册资金</string>
+    <string name="bid_zcjz">资产净值</string>
+    <string name="bid_sndjyxjlr">上年度经营现金流入</string>
+    <string name="bid_hy">行业</string>
+    <string name="bid_jyqk">经营情况</string>
+    <string name="bid_ssqk">涉诉情况</string>
+    <string name="bid_zxjl">征信记录</string>
+    <string name="bid_hkjh">还款计划</string>
+    <string name="bid_hkjh_title1">合约还款日期</string>
+    <string name="bid_hkjh_title2">科目/金额(元)</string>
+    <string name="bid_hkjh_title3">实际还款日期</string>
+    <string name="bid_cwzk">财务状况</string>
+    <string name="bid_cwzk_dw">金额单位：万元</string>
+    <string name="bid_cwzk_nf">年份</string>
+    <string name="bid_cwzk_zysr">主营收入</string>
+    <string name="bid_cwzk_jlr">净利润</string>
+    <string name="bid_cwzk_zzc">总资产</string>
+    <string name="bid_cwzk_jzc">净资产</string>
+    <string name="bid_cwzk_bz">备注</string>
+    <string name="bid_yqsy">年化收益</string>
+    <string name="bid_rzqx">投资期限</string>
+    <string name="bid_zhye">帐户余额：</string>
+    <string name="bid_page_title">借款详情</string>
+    <string name="cre_page_title">债权详情</string>
+    <string name="bid_buy_hint">请输入购买金额</string>
+    <string name="you_can_buy">你可以购买：</string>
+    <string name="input_deal_pwd">请输入8位交易密码</string>
+    <string name="buy">支付</string>
+    <string name="bid_buy_ok">恭喜你，投标成功</string>
+    <string name="bid_buy_error_1">出借金额不能大于可投金额！</string>
+    <string name="bid_buy_error_2" tools:ignore="UnusedResources">出借金额必须是100的整数倍！</string>
+    <string name="bid_buy_error_3">出借金额不能小于%1$d</string>
+    <string name="bid_buy_error_4">剩余可借金额不能小于%1$d</string>
+    <string name="bid_buy_error_5">出借金额不能为空！</string>
+    <string name="bid_ten_thousand_unit">万元</string>
+    <string name="bid_billion_unit">亿元</string>
+    <string name="bid_million_units">千万</string>
+    <string name="bid_yuan_unit">元</string>
+
+    <!-- 债权购买 -->
+    <string name="cre_buy_confirm">债权购买确认</string>
+    <string name="cre_buy_confirm_hint">请输入8位交易密码</string>
+    <string name="cre_buy_confirm_ok">提交支付</string>
+    <!-- 密码设置 -->
+    <string name="password_title">设置密码</string>
+    <string name="password_deal_title">设置交易密码</string>
+    <string name="password_deal_title_m">修改交易密码</string>
+    <string name="password_login_title">修改登录密码</string>
+    <string name="password_set_login_title">设置登录密码</string>
+    <string name="please_input_deal_pwd">请输入交易密码</string>
+    <string name="please_input_deal_pwd_again">请再次输入交易密码</string>
+    <string name="pwd_deal_title">设置交易密码</string>
+    <string name="pwd_deal_lab">为保证交易安全，请设置交易密码用于交易时确认。</string>
+    <string name="pwd_deal_edt0_hint">请输入8位原密码</string>
+    <string name="pwd_deal_edt1_hint">请输入8位新密码</string>
+    <string name="pwd_deal_edt2_hint">请确认新密码</string>
+    <string name="pwd_shousi_check">开启手势密码</string>
+    <string name="pwd_shousi_setting">设置手势密码</string>
+    <string name="pwd_shousi_setting_m">修改手势密码</string>
+    <string name="pwd_shousi_qrta">确认已保存的图案</string>
+    <string name="pwd_shousi_wrong" tools:ignore="UnusedResources">解锁密码不正确，请重试</string>
+    <string name="pwd_shousi_hzta" tools:ignore="UnusedResources">绘制解锁图案，请至少连接4个点：</string>
+    <string name="pwd_shousi_qrhzta" tools:ignore="UnusedResources">再次绘制图案进行确认：</string>
+    <string name="pwd_shousi_alert_erro" tools:ignore="UnusedResources">两次绘制不相同，请重新设置</string>
+    <string name="pwd_shousi_success" tools:ignore="UnusedResources">解锁图案绘制成功</string>
+    <string name="pwd_login_edt0_hint">请输入原密码</string>
+    <string name="pwd_login_edt1_hint">请输入新密码</string>
+    <string name="pwd_login_edt2_hint">请确认新密码</string>
+    <string name="pwd_login_btn_ok">确认</string>
+    <string name="pwd_showsi_input_hint">请输入手势密码</string>
+    <string name="pwd_showsi_start">开始绘制</string>
+    <!-- 提现页面 -->
+    <string name="withdraw">提现</string>
+    <string name="new_deal_pwd">新的交易密码</string>
+    <string name="confirm_deal_pwd">确认交易密码</string>
+    <string name="withdraw_complete_security_info">为了您的资金安全，请完善安全信息认证</string>
+    <!-- 忘记交易密码 -->
+    <string name="withdraw_get_pwd">找回交易密码</string>
+    <string name="withdraw_get_pwd_phone_null">手机号码不能为空</string>
+    <string name="withdraw_get_pwd_phone_format">手机号码格式不正确</string>
+    <string name="withdraw_get_pwd_success">修改交易密码成功</string>
+    <string name="withdraw_get_pwd_no_code">验证码不能为空</string>
+    <string name="withdraw_get_pwd_no_pwd">新密码不能为空</string>
+    <string name="withdraw_get_pwd_no_repwd">确认密码不能为空</string>
+
+    <!-- 银行卡管理 -->
+    <string name="add_bank_card">添加银行卡</string>
+    <string name="my_bank_card_info">银行卡信息</string>
+    <string name="bank_card_alert">请填写真实资料，银行卡用户必须与注册真实姓名一致 !</string>
+    <string name="bank_manager_title">银行卡管理</string>
+    <string name="bank_manager_delete">删除</string>
+    <string name="bank_manager_add">添加银行卡</string>
+    <string name="bank_card_add_username">开户名</string>
+    <string name="bank_idcardnum">身份证号</string>
+    <string name="bank_phoneNum">手机号码</string>
+    <string name="bank_card_add_lab">您只能绑定与实名认证信息一致的银行卡</string>
+    <string name="bank_card_add_select_bank">选择银行</string>
+    <string name="province">省份</string>
+    <string name="city">市区</string>
+    <string name="bank_card_add_addr">银行所在地：</string>
+    <string name="bank_card_add_khh">开户行</string>
+    <string name="open_subbranch_bank">开户支行</string>
+    <string name="bank_card_card_number">卡号</string>
+    <string name="bank_card_add_khh_hint">请输入开户行</string>
+    <string name="bank_card_add_cardno">银行卡卡号</string>
+    <string name="bank_card_add_cardno_hint">请输入银行卡卡号</string>
+    <string name="bank_card_add_confirm_card">确认卡号</string>
+    <string name="bank_card_add_btn_ok">提交</string>
+    <string name="add_card_unregist_third">您需要在第三方托管平台进行注册，才能绑定银行卡!</string>
+    <string name="add_card_no_bank">请选择银行</string>
+    <string name="add_card_no_address">请选择开户所在地</string>
+    <string name="add_card_no_khh">开户行不能为空</string>
+    <string name="add_card_no_number">银行卡号不能为空</string>
+    <string name="add_card_no_re_number">确认卡号不能为空</string>
+    <string name="add_card_re_number_erro">确认卡号和银行卡号不相同</string>
+    <string name="add_card_success">成功添加银行卡</string>
+    <string name="add_card_choice_provice">请选择省份！</string>
+    <string name="add_card_choice_citys">请先选择城市！</string>
+    <string name="bank_select_title">选择银行</string>
+    <string name="bank_address_title">选择开户所在地</string>
+
+    <string name="card_delete_title">删除银行卡</string>
+    <string name="card_delete_content">确定删除此绑定的银行卡吗？</string>
+    <string name="card_delete_ok">确定</string>
+    <string name="card_delete_cancle">取消</string>
+    <string name="card_delete_success">删除银行卡成功</string>
+    <string name="bank_address_city_hint">请输入或选择常用城市</string>
+    <string name="hot_citys">热门城市</string>
+    <!-- 退出程序对话框 -->
+    <string name="exit_app_title">退出程序</string>
+    <string name="exit_app_content">确定退出程序？</string>
+    <string name="exit_app_ok">确定</string>
+    <string name="exit_app_cancle">取消</string>
+
+    <string name="recharge">充值</string>
+    <string name="verify_record">核对转账记录</string>
+    <string name="recharge_edit_hint">请输入充值金额：</string>
+    <string name="recharge_text_fee">充值手续费(元)：</string>
+    <string name="recharge_text_amount">实际到账金额(元)：</string>
+
+    <string name="can_user_amount">可用金额</string>
+    <string name="bank_card">银行卡</string>
+    <string name="select_bank_card">请选择银行卡</string>
+    <string name="no_bank_card_to_select">您还没有绑定银行卡，请先绑定银行卡</string>
+    <string name="bind_bank_card">绑定</string>
+    <string name="withdraw_amount">提现金额：</string>
+    <string name="withdraw_type">是否指定资金通道:</string>
+    <string name="withdraw_type_choice">资金通道选择:</string>
+    <string name="withdraw_fee_init">提现费用(元)：</string>
+    <string name="withdraw_fee">提现费用(元)：%1$s(提现费用将从提现金额中扣除)</string>
+    <string name="withdraw_fee_w">提现费用(元)：%1$s(提现费用将从提现金额外扣除)</string>
+    <string name="withdraw_fee_amount">提现费用(元)：%1$s(提现费用将从您的余额中扣除)</string>
+    <string name="withdraw_fee_pt">提现费用(元)：%1$s(提现费用由平台账号给您垫付)</string>
+    <string name="real_getamount">实际到账金额(元)：%1$s</string>
+    <string name="may_income_time">预计到帐时间：%1$s(1-2个工作日内到账，节假日除外)</string>
+    <string name="withdraw_deal_pwd">交易密码</string>
+    <string name="withdraw_deal_pwd_hint">请输入交易密码</string>
+    <string name="withdraw_deal_pwd_forget">忘记交易密码</string>
+    <string name="withdraw_btn_text">申请提现</string>
+    <!-- 站内消息 -->
+    <string name="message_title">站内消息</string>
+    <string name="message_hint">您共收到了%1$d条站内消息，%2$d条未读站内公告，请注意查看哦。如发现异常， 请联系迪蒙网贷客服:400&#8211;8888 8888。</string>
+    <string name="has_new_version">有新版本，是否进行升级？</string>
+    <string name="update">升级</string>
+    <string name="cancle">取消</string>
+    <string name="exit">退出</string>
+    <string name="image">图片</string>
+    <string name="yuan">元</string>
+
+    <string name="not_safe">安全等级低，请先进行安全认证</string>
+    <string name="no_deal_pwd">未设置交易密码，请先进行设置</string>
+    <string name="no_phone_number">未通过手机认证，请先进行认证</string>
+    <string name="deal_pwd_hint">密码必须8个字符，字母+数字，且首个字符必须是字母</string>
+    <string name="deal_pwd_null">交易密码不能为空</string>
+    <string name="khh_text_erro">开户行不能包含特殊字符，请修改</string>
+    <string name="realname_text_erro">真实姓名格式不正确</string>
+    <string name="id_number_length_error">请输入正确的身份证号</string>
+
+    <string name="show_app_version">您的迪蒙网贷版本为%1$s。已经是最新版本！</string>
+    <string name="get_password">找回密码</string>
+    <string name="get_trade_password">找回交易密码</string>
+    <string name="get_password_btn">找回密码</string>
+    <string name="get_password_mobile_hint">请输入手机号码</string>
+    <string name="get_password_verify_hint">请输入验证码</string>
+    <string name="get_password_phone_null">手机号码不能为空</string>
+    <string name="get_password_phone_format">手机号码格式不正确</string>
+    <string name="get_password_verifycode_null">验证码不能为空</string>
+    <string name="reset_login_pwd_verify_code">请输入您收到的校验码</string>
+    <string name="reset_login_pwd_new_pwd">请输入新密码</string>
+    <string name="reset_login_pwd_confirm">请输入确认密码</string>
+    <string name="reset_login_code_null">校验码不能为空</string>
+    <string name="reset_login_pwd_null">新密码不能为空</string>
+    <string name="reset_login_repwd_null">确认密码不能为空</string>
+    <string name="reset_login_pwd_format">密码格式不正确</string>
+    <string name="reset_login_two_pwd">两次输入的密码不一致</string>
+
+    <string name="session_time_out" tools:ignore="UnusedResources">未登录或由于您长时间未做任何操作已经注销了您的登录信息，请重新登录！</string>
+
+    <string name="set_hand_title">设置手势密码指引</string>
+    <string name="set_hand_centent">为了您的账号安全，您可以设置手势密码！</string>
+    <string name="set_hand_btn_ok">设置手势密码</string>
+    <string name="set_hand_cancle">放弃</string>
+    <string name="new_version">new</string>
+    <string name="pwd_level_0">弱</string>
+    <string name="pwd_level_1">中等</string>
+    <string name="pwd_level_2">强</string>
+
+    <string name="withdraw_success">提现成功</string>
+    <string name="withdraw_pwd_null">交易密码不能为空</string>
+    <string name="withdraw_not_set_pwd">没有设置交易密码</string>
+    <string name="withdraw_amount_not_enought">提现金额不能大于可用金额</string>
+    <string name="withdraw_amount_empty">提现金额不能为空，请输入提现金额</string>
+    <string name="withdraw_not_select_bankcard">您还没有选择银行卡，请先选择银行卡</string>
+    <string name="withdraw_has_no_bankcard">您未绑定银行卡，请点击右上角按钮进行银行卡绑定</string>
+    <string name="withdraw_has_no_pwd">您还没有设置交易密码,请先进行交易密码设置</string>
+
+    <string name="wenxi_tishi">温馨提示：</string>
+    <string name="no_3_register">您需要在第三方托管平台上进行注册，才可申请充值提现！</string>
+    <string name="no_3_register_ok">注册</string>
+    <string name="no_3_register_cancle">取消</string>
+    <string name="no_3_debit_auth_ok">确定</string>
+    <string name="no_3_debit_auth_cancle">取消</string>
+    <string name="no_3_debit_auth">您尚未授权还款转账与二次分配转账，请授权，点击"确定"，跳到授权页面，点击"取消"返回当前页面!</string>
+
+    <string name="refresh">刷新</string>
+    <string name="unread_messages">未读消息</string>
+    <string name="readed_messages">已读消息</string>
+
+    <string name="hyzx_hyzx">行业资讯</string>
+    <string name="hyzx_hlwjr">互联网金融</string>
+    <string name="hyzx_wzgg">网站公告</string>
+    <string name="hyzx_detail_title">资讯</string>
+    <string name="wzgg_detail_title">公告</string>
+
+
+    <string name="gesture_password_guide_text">你可以创建一个解锁图案，这样他人在借用你的手机时，将无法打开应用。</string>
+    <string name="gesture_password_guide_creat_btn">创建手势密码</string>
+    <string name="title_unlock_gesture_password">解锁手势密码</string>
+    <string name="title_setting_gesture_password">设置手势密码</string>
+    <string name="title_resetting_gesture_password">修改手势密码</string>
+    <string name="tow_pwd_error">两次手势密码绘制不一致，请重新绘制</string>
+    <string name="confirm">确认</string>
+    <string name="app_exit">再按一次退出程序</string>
+    <string name="page_title_home">首页</string>
+    <string name="page_title_investment">借款</string>
+    <string name="page_title_discovery">发现</string>
+    <string name="page_title_mine">我的账户</string>
+
+    <!-- 我的账户界面string -->
+    <string name="account_hello">你好，赚不够 !</string>
+    <string name="account_bid_total_income">出借总收益(元)</string>
+    <string name="account_in_bid_money">出借中的金额(元)：</string>
+    <string name="account_total_bid">净资产（元）</string>
+    <string name="account_available_balance">可用余额（元）</string>
+    <string name="account_freeze_money">冻结金额（元）</string>
+    <string name="account_loan_liabilities">借款负债（元）</string>
+    <string name="account_experience_has_used">（已使用）</string>
+    <string name="account_return_money">当月预期回款金额</string>
+    <!-- <string name="account_my_score">我的积分</string> -->
+    <string name="account_my_reward">我的奖励</string>
+    <string name="my_reward_experience">体验金</string>
+    <string name="experience_lend_title">借款标题</string>
+    <string name="experience_lend_money">借款金额</string>
+    <string name="experience_bid_money">出借金额</string>
+    <string name="experience_year_rate">年化利率</string>
+    <string name="experience_income_time">体验收益期</string>
+    <string name="experience_wait_money">待赚金额</string>
+    <string name="experience_finish_money">已赚金额</string>
+    <string name="experience_next_time">下个还款日</string>
+    <string name="experience_finish_time">结清时间</string>
+    <string name="experience_time_count">将在%1$d天%2$d小时%3$d分%4$d秒后失效</string>
+    <string name="experience_time_settle">截止时间：%1$s</string>
+    <string name="experience_time_used">使用时间：%1$s</string>
+    <string name="symbol_rmb">&#165;</string>
+    <string name="my_reward_red">红包</string>
+    <string name="my_reward_raised_rate_voucher">加息券</string>
+    <string name="my_reward_invest_detail">出借详情</string>
+    <string name="my_reward_invest_immediate">立即投标</string>
+    <string name="account_my_bid">我的债权</string>
+    <string name="overdue_time">过期时间：%1$s</string>
+    <string name="use_requirement">出借金额满%1$d元可以使用</string>
+    <string name="use_requirement_no">无使用条件</string>
+    <string name="account_creditor_right">债权转让</string>
+    <!-- <string name="account_my_collect">我的收藏</string> -->
+    <string name="account_deal_record">交易记录</string>
+    <string name="account_my_loan">我的借款</string>
+    <string name="account_bank_card_manage">银行卡管理</string>
+    <string name="account_bank_card_choose">选择银行卡</string>
+    <!-- <string name="account_news">资讯</string> -->
+    <string name="account_letter_in_station">站内信</string>
+    <string name="account_newcomer_bigin">新手入门</string>
+    <string name="account_setting">设置</string>
+    <string name="hint_no_experience">您当前没有体验金</string>
+    <string name="hint_no_red">您当前没有红包</string>
+    <string name="hint_no_voucher">您当前没有加息券</string>
+
+    <string name="experience_money">体验金</string>
+    <string name="experience_bid_detail">体验金出借详情</string>
+    <string name="experience_money_total">体验金总额（元）</string>
+    <string name="experience_in_bid">出借中的金额（元）</string>
+    <string name="experience_remain">体验金余额（元）</string>
+    <string name="experience_interest">待收利息（元）</string>
+    <string name="experience_has_got_interest">已收利息（元）</string>
+    <string name="experience_money_used">已使用</string>
+    <string name="experience_money_unused">未使用</string>
+    <string name="experience_money_unit">%1$s元</string>
+
+    <!-- 关于APP -->
+    <string name="about_title">关于迪蒙网贷</string>
+    <string name="about_update">检查更新</string>
+    <string name="about_tel">客服电话</string>
+    <string name="update_btn_text">更新</string>
+    <string name="has_update_version">尊敬的客户，平台已推出客户端新版本%s，请您及时下载更新！</string>
+    <string name="current_version_is_new">当前版本为最新版本！</string>
+    <string name="setting_security">安全信息</string>
+    <string name="setting_pwd_manager">密码管理</string>
+    <string name="setting_about">关于APP</string>
+    <string name="setting_loginout">退出登录</string>
+    <string name="setting_title">设置</string>
+    <string name="do_you_want_login_out">确定要退出当前账号？</string>
+    <string name="supplement_user_name">请输入用户名</string>
+    <string name="supplement_pwd">请输入密码</string>
+    <string name="supplement_repwd">请再次输入密码</string>
+    <string name="supplement_yaoqing">邀请码，有则填</string>
+    <string name="supplement_submit">提交</string>
+    <string name="pwd_manager_title">密码管理</string>
+    <string name="pwd_manager_login">修改登录密码</string>
+    <string name="pwd_manager_shoushi">设置手势密码</string>
+    <string name="pwd_manager_trade">设置交易密码</string>
+    <string name="pwd_manager_pay">修改交易密码</string>
+    <string name="pwd_manager_find_pay">找回交易密码</string>
+    <string name="pwd_manager_input_phone">输入手机号码</string>
+    <string name="pwd_manager_input_code">请输入手机验证码</string>
+    <string name="pwd_manager_get_code">获取验证码</string>
+    <string name="next">下一步</string>
+    <string name="modify_login_pwd_old">原登录密码</string>
+    <string name="modify_login_pwd_new">新密码</string>
+    <string name="modify_login_pwd_re_new">确认新密码</string>
+    <string name="modify_login_pwd_old_forget">忘记原密码</string>
+    <string name="modify_pay_pwd_old">原交易密码</string>
+    <string name="modify_pay_pwd_new">新交易密码</string>
+    <string name="modify_pay_pwd_re_new">确认新交易密码</string>
+    <string name="modify_pay_pwd_old_forget">忘记原交易密码</string>
+    <string name="modify_login_pwd_confirm">确定</string>
+
+
+    <!-- 安全信息认证 -->
+    <string name="security">安全信息认证</string>
+    <string name="account_savelvl_less_high">较高</string>
+    <string name="account_savelvl_high">高</string>
+    <string name="account_identity_card">实名认证</string>
+    <string name="account_name_tip">请输入真实姓名</string>
+    <string name="account_identity_card_id">身份证号</string>
+    <string name="account_input_identity_card_id">请输入身份证号</string>
+    <string name="account_security_code">验证码</string>
+    <string name="account_input_security_code">请输入验证码</string>
+    <string name="account_get_security_code">获取验证码</string>
+    <string name="account_has_not_set">未设置</string>
+    <string name="account_set_security">设置</string>
+    <string name="account_unset_security">取消设置</string>
+    <string name="realname_format_erro">姓名格式有误，请重试！</string>
+    <string name="realname_length_error">姓名长度为2到10个中文字符</string>
+    <string name="get_code_success">获取验证码成功</string>
+    <string name="email_is_not_exsit">邮箱不存在</string>
+    <string name="phone_error">电话号码错误</string>
+    <string name="user_name_empty">用户名不能为空！</string>
+    <string name="pwd_empty">密码不能为空！</string>
+    <string name="find_pwd_wait_time">%ds后重试</string>
+    <string name="find_pwd_send_success">验证码已发送到你的手机号码，请查收！</string>
+    <string name="find_pwd_phone_empty">手机号码不能为空！</string>
+    <string name="find_pwd_phone_format_error">手机号码格式有误，请重试！</string>
+    <string name="find_pwd_code_empty">验证码不能为空！</string>
+    <string name="setting_pwd_empty">密码不能为空！</string>
+    <string name="setting_trading_pwd_empty">交易密码不能为空！</string>
+    <string name="setting_pwd_format_error">密码6~16个字符，区分大小写</string>
+    <string name="setting_pwd_not_same">两次密码输入不一致！</string>
+    <string name="repwd_is_null">确认密码不能为空！</string>
+    <string name="repwd_new_is_null">确认新密码不能为空！</string>
+    <string name="account_trade_pwd">交易密码</string>
+    <string name="account_trade_pwd_tip">请输入交易密码</string>
+    <string name="account_trade_repwd_tip">重复交易密码</string>
+    <string name="deal_pwd_digits">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLIMNOPQRSTUVWXYZ</string>
+
+
+    <!-- 站内信 -->
+    <string name="letter_modify_pwd_success">密码修改成功</string>
+    <string name="lettler_regist_success">注册成功</string>
+    <string name="letter_date">2015&#8211;05&#8211;25</string>
+    <string name="letter_time">10:23:59</string>
+    <string name="letter_in_station">站内信</string>
+    <string name="no_letter_list_record">当前没有站内信！</string>
+
+    <string name="new_come_help">新手入门</string>
+    <string name="investment_detail">出借详情</string>
+    <string name="pull_up_to_load_more">往上拖动查看更多详情</string>
+    <string name="bid_syktjer">剩余可出借金额(元)</string>
+    <string name="bid_buy_user_amount">账户余额：%1$s元</string>
+    <string name="buy_ammount_amount">购买金额：%1$s元</string>
+    <string name="expect_income_amount">预期收益：%1$s元</string>
+    <string name="bid_buy_amount">出借金额：</string>
+    <string name="bid_yuan">%1$d元</string>
+    <string name="bid_buy_btn">马上支付</string>
+    <!-- 我的投资  -->
+    <string name="trade_record_balance">余额：</string>
+    <string name="my_insest_repayment">回款中</string>
+    <string name="bid_doing">投标中</string>
+    <string name="my_insest_settled">已结清</string>
+    <string name="my_insest_failure">已失败</string>
+    <string name="my_collection_money">待收金额</string>
+    <string name="my_collection_invest_now">去出借</string>
+    <string name="my_collection_delete">删除</string>
+    <string name="creditor_turn_ining">转让中</string>
+    <string name="creditor_turn_out">已转出</string>
+    <string name="creditor_turn_in">已转入</string>
+    <string name="creditor_cancel_trun_out">取消转让</string>
+    <string name="cancel_creditor_right">你确定要取消当前债权转让吗？</string>
+    <string name="cancel_success">取消成功</string>
+    <string name="creditor_value">债权价值</string>
+    <string name="creditor_trun_out_money">转让金额</string>
+    <string name="creditor_exchange_fee">交易费：</string>
+    <string name="creditor_trun_out_date">转让日期：</string>
+    <string name="creditor_whether_turn_of">是否取消转让!</string>
+    <string name="creditor_turn_out_price">转让价格</string>
+    <string name="creditor_buy">债权购买</string>
+    <string name="bid_info">标的信息</string>
+    <string name="invest_check_context">查看合同</string>
+    <!-- 交易记录 -->
+    <string name="trade_record">交易记录</string>
+    <string name="trade_record_time">2015&#8211;11&#8211;02</string>
+    <string name="annual_interest_rate">年利化率</string>
+    <string name="loan_term">借款期限</string>
+    <string name="loan_money">借款金额</string>
+
+    <!-- 充值界面 -->
+    <string name="recharge_notice">您需要在第三方托管平台进行注册, 才可申请充值提现!</string>
+    <string name="recharge_regist">立即注册</string>
+    <string name="recharge_input_money">请输入充值金额</string>
+    <string name="recharge_input_moneynr">到账金额&#8194;：&#8194;</string>
+    <string name="recharge_input_notic">提&#8194;&#8194;&#8194;示&#8194;：</string>
+    <string name="recharge_input_notics">请先登陆个人网银或手机银行向以上电子账号转账后，再进行核对！</string>
+    <string name="recharge_input_moneyn">充值金额：</string>
+    <string name="recharge_phoneNum">预留手机号：</string>
+    <string name="recharge_bankNum">银行卡号：</string>
+    <string name="recharge_eleAcount">电子账号：</string>
+    <string name="recharge_available">可用余额：</string>
+    <string name="recharge_yuan">元</string>
+    <string name="two_thousand">2000</string>
+    <string name="one_thousand">1000</string>
+    <string name="five_hundred">500</string>
+    <string name="one_hundred">100</string>
+    <string name="zero_yuan">0.00</string>
+    <string name="recharge_factorage">充值手续费（元）：</string>
+    <string name="recharge_account_money">充值金额（元）：</string>
+    <string name="recharge_tip_one">1.为了您的账户安全, 请在充值前进行身份确认、手机绑定以及交易密码设置。</string>
+    <string name="recharge_tip_two">2.您的账户资金将由平台管理。</string>
+    <string name="recharge_tip_three">3.请注意您的银行卡充值限制, 以免造成不便。</string>
+    <string name="recharge_tip_four">4.禁止洗钱、信用卡套现、虚假交易等行为, 一经发现并确认将终止该账户的使用。</string>
+    <string name="recharge_tip_five">5.如果充值金额没有及时到账, 请联系客服, </string>
+    <string name="recharge_tip_phone">400&#8211;678&#8211;55182</string>
+    <string name="recharge_tip_security">为了您的账户安全，请完善安全信息认证！</string>
+    <string name="my_score">我的积分</string>
+    <string name="has_no_score">您没有获取积分</string>
+    <string name="withdraw_can_get">可提现金额（元）</string>
+    <string name="input_withdraw_money">请输入提现金额</string>
+    <string name="withdraw_user_pull_black">您已经被系统拉黑，请先还清借款，才能提现！</string>
+
+    <!-- 发现界面 -->
+    <string name="discovery_news">信息披露</string>
+    <string name="discovery_commonweal_bid">公益捐赠</string>
+    <string name="discovery_rich_list">土豪榜</string>
+    <string name="discovery_spread_reward">推广有奖</string>
+    <string name="discovery_my_spread">我的推广</string>
+    <string name="discovery_manage_money_calculator">借贷计算器</string>
+    <!-- 分享 -->
+    <string name="share_to">分享到</string>
+
+    <!-- 发现   资讯 -->
+    <string name="news">信息披露</string>
+    v
+    <string name="media_report">法律法规</string>
+    <string name="industry_news">行业资讯</string>
+    <string name="financial_school">网站公告</string>
+    <string name="news_title">标题5.0APP标准版全新上线</string>
+    <string name="news_summary">资讯摘要5.0APP标准版全新上线5.0APP标准版全新上线</string>
+    <string name="news_detail">资讯详情</string>
+
+    <!-- 发现  公益捐赠 -->
+    <string name="donation_detail">捐赠详情</string>
+    <string name="donation_record">捐助记录</string>
+    <string name="donation_bid">捐助</string>
+    <string name="bid_sykjjer">剩余可捐金额(元)</string>
+    <string name="bid_donation_btn">马上捐助</string>
+    <string name="bid_donation_amount">捐助金额：</string>
+    <string name="bid_donation_complete_security_info">为了您的资金安全，捐赠前请完善安全信息认证</string>
+    <!-- 捐助详情 -->
+    <string name="public_welfare_institutions">公益机构：%1$s</string>
+    <string name="donation_detail_target">目标：%1$s</string>
+    <string name="donation_detail_people">捐款人数：%1$s</string>
+    <string name="donation_end_time">结束筹集时间：%1$s</string>
+    <string name="donation_start_time">开始筹集时间：%1$s</string>
+    <string name="donation_min">最低捐赠：%1$s</string>
+    <string name="donation_max">%1$s</string>
+
+    <!-- 发现 土豪榜 -->
+    <string name="week_ranking">周排行</string>
+    <string name="month_ranking">月排行</string>
+    <string name="year_ranking">年排行</string>
+    <string name="week_ranking_no_data">暂无周排行数据</string>
+    <string name="month_ranking_no_data">暂无月排行数据</string>
+    <string name="year_ranking_no_data">暂无年排行数据</string>
+
+    <!-- 理财计算 -->
+    <string name="calculator_result">计算结果</string>
+    <string name="shou_hui_ben_xi">您将在%1$s个月内收回本息</string>
+    <string name="your_interest_str">出借(元):%1$s</string>
+    <string name="load_money_str">应收利息(元):%1$s</string>
+    <string name="repayment_principal_and_interest_str">偿还本息:%1$s</string>
+    <string name="repayment_principal_str">偿还本金:%1$s</string>
+    <string name="repayment_interest_str">偿还利息:%1$s</string>
+    <string name="remain_principal_str">剩余本金:%1$s</string>
+
+    <!-- 日历 -->
+    <string name="repayment_plan">回款计划</string>
+    <!-- 星期 -->
+    <string name="Mon">一</string>
+    <string name="Tue">二</string>
+    <string name="Wed">三</string>
+    <string name="Thu">四</string>
+    <string name="Fri">五</string>
+    <string name="Sat">六</string>
+    <string name="Sun">日</string>
+
+    <string name="dsbx_name">待收本息：%1$s元</string>
+    <string name="syqs_name">剩余期数：%1$s期</string>
+    <string name="replay_mode">还款方式：%1$s</string>
+    <string name="protect_mode">保障方式：%1$s</string>
+    <string name="publish_time">发布日期：%1$s</string>
+    <string name="remain_time">剩余时间：%1$s</string>
+    <string name="dbjg_name">担保机构：%1$s</string>
+    <string name="qixiri">起息日期：</string>
+
+    <!-- 我的借款 -->
+    <string name="loan_repayment_total_money">还款总额</string>
+    <string name="loan_repayment_money">还款金额</string>
+    <string name="loan_cycle">期数：</string>
+    <string name="loan_current_cycle">当前期数：</string>
+    <string name="loan_last_repayment_date">下个还款日：</string>
+    <string name="loan_repayment_detail">还款详情</string>
+    <string name="loan_timeout">逾期</string>
+    <string name="loan_repayment_in">还款中</string>
+    <string name="loan_pay_off">已还清</string>
+    <string name="loan_failure">借款失败</string>
+    <string name="loan_publish_time">发布时间</string>
+    <string name="loan_severe_overdue">严重逾期</string>
+    <string name="loan_repayment_current_date">还款日为当前日期</string>
+    <string name="loan_back_repayment">已还</string>
+    <string name="loan_eceived">已收</string>
+    <string name="loan_not_yet">未还</string>
+    <string name="loan_collect">待收</string>
+    <string name="loan_repayment_date">应还款日期</string>
+    <string name="loan_repayment_already_date">已还款日期：</string>
+    <string name="loan_management_fee">逾期管理费：</string>
+    <string name="loan_overdue_fee">逾期罚息：</string>
+
+    <string name="invset_time">出借时间</string>
+    <string name="invset_annual_rate">年化利率：</string>
+    <string name="invest_back_money">回收金额：</string>
+    <string name="invest_make_money">已赚金额：</string>
+    <string name="invest_project_name">项目名称：</string>
+    <string name="invest_failure_season">失败原因：</string>
+    <string name="invest_money_symbol">出借金额：</string>
+
+    <string name="select_recharge_mode">请选择充值方式：</string>
+    <string name="net_connection_error">网络不可用，请检查网络！</string>
+
+    <!-- 注册第三方相关文档 -->
+    <string name="third_register_description">您需要在第三方托管平台上进行注册，才可进行%1$s！</string>
+</resources>

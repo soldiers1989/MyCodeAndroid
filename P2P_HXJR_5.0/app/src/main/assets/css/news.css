@@ -1,0 +1,10 @@
+html{padding-left:0.4rem;padding-right:0.4rem;}
+body{color:#333333;word-break:break-all;}
+img{max-width:100%;}
+p{ margin-top:0.9rem;margin-bottom:0.9rem;}
+hr{height:1px;border:none;border-top:1px solid #e5e5e5;margin-top:0.9rem;margin-bottom:0.9rem;}
+#subTitle{font-size:1.1rem;color:#333333;}
+#from{font-size:0.7rem;color:#999999;margin-top:0.7rem;float:left;margin-right:2.8rem}
+#publishTime{font-size:0.7rem;color:#999999;margin-top:0.7rem;float:left;}
+#content{font-size:1rem;color:#666666;}
+.clear{clear:both;}

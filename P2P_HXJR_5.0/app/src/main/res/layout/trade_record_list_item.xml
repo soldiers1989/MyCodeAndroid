@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/edit_text_bg"
+    android:orientation="vertical" >
+    
+    <View
+        android:id="@+id/top_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.66px"
+        android:background="@color/line_color" />
+    
+    <RelativeLayout
+        android:id="@+id/recharge_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_line"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/space_5" >
+	
+        <TextView
+            android:id="@+id/recharge_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/recharge"
+            android:textColor="@color/text_black_6" />
+
+        <TextView
+            android:id="@+id/balance_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingRight="10dp"
+            android:text="@string/one_thousand"
+            android:textSize="@dimen/text_size_15"
+            android:textColor="@color/orange" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_toLeftOf="@id/balance_txt"
+            android:text="@string/trade_record_balance"
+            android:textSize="@dimen/text_size_15"
+            android:textColor="@color/text_black_6" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bid_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recharge_layout"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/space_5"
+        android:paddingLeft="@dimen/space_5"
+        android:paddingRight="@dimen/space_5" >
+
+        <TextView
+            android:id="@+id/recharge_time_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/trade_record_time"
+            android:textSize="@dimen/text_size_15"
+            android:textColor="@color/text_black_9" />
+
+        <TextView
+            android:id="@+id/trade_record_bid_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingRight="10dp"
+            android:text="@string/zero_yuan"
+            android:textSize="@dimen/text_size_15"
+            android:textColor="@color/red" />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.66px"
+        android:layout_below="@id/bid_layout"
+        android:background="@color/line_color" />
+
+</RelativeLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_layout" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_05"
+        android:layout_marginTop="@dimen/content_margin_top"
+        android:background="@color/line_color" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/icon_14"
+        android:drawablePadding="8dp"
+        android:drawableRight="@drawable/icon_jt3"
+        android:gravity="center_vertical"
+        android:onClick="modifyLoginPwd"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:text="@string/pwd_manager_login"
+        android:textColor="@color/text_black_6"
+        android:textSize="@dimen/text_size_15" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_05"
+        android:background="@color/line_color" 
+        android:layout_marginLeft="@dimen/space_50"/>
+
+    <Button
+        android:id="@+id/shouShiPwdBtn"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/icon_15"
+        android:drawablePadding="8dp"
+        android:drawableRight="@drawable/icon_jt3"
+        android:gravity="center_vertical"
+        android:onClick="reSetShouShi"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:text="@string/pwd_manager_shoushi"
+        android:textColor="@color/text_black_6"
+        android:textSize="@dimen/text_size_15" />
+
+    <View
+        android:id="@+id/last_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_05"
+        android:background="@color/line_color" 
+        android:layout_marginLeft="@dimen/space_50"/>
+
+    <Button
+        android:id="@+id/jiaoYiPwdBtn"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/icon_14"
+        android:drawablePadding="8dp"
+        android:drawableRight="@drawable/icon_jt3"
+        android:gravity="center_vertical"
+        android:onClick="reSetTradePwd"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:text="@string/pwd_manager_trade"
+        android:textColor="@color/text_black_6"
+        android:visibility="gone"
+        android:textSize="@dimen/text_size_15" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_05"
+        android:visibility="gone"
+        android:background="@color/line_color" />
+
+</LinearLayout>

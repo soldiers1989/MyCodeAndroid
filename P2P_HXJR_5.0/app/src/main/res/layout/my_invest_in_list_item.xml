@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="102dp"
+        android:background="@color/white" >
+
+        <View
+            android:id="@+id/item_top_borther"
+            android:layout_width="match_parent"
+            android:layout_height="0.66dp"
+            android:background="@color/main_list_bother" />
+
+        <TextView
+            android:id="@+id/bidTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="14dp"
+            android:text="个人周转借款"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="17dp"
+            android:text="投标中"
+            android:textColor="@color/main_color"
+            android:textSize="@dimen/text_size_11" />
+
+        <com.dm.widgets.RoundProgressBar
+            android:id="@+id/progress"
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            app:roundWidth="4dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="25dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginLeft="@dimen/space_8"
+            app:progressText="抢购"
+            app:roundColor="@color/roundColor"
+            app:roundProgressColor="@color/main_color"
+            app:textColor="@color/text_black_6"
+            app:textSize="@dimen/text_size_12" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bidTitle"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@id/progress"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="1.2"
+                android:gravity="center_horizontal|bottom"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp" >
+
+                    <TextView
+                        android:id="@+id/yearRate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="9.50"
+                        android:textColor="@color/orange"
+                        android:textSize="@dimen/text_size_21" />
+
+                    <TextView
+                        android:id="@+id/yearRateUnit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/yearRate"
+                        android:layout_marginLeft="1dp"
+                        android:layout_toRightOf="@id/yearRate"
+                        android:text="%"
+                        android:textColor="@color/orange"
+                        android:textSize="@dimen/text_size_11" />
+
+                    <TextView
+                        android:id="@+id/giftRate_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:layout_toRightOf="@id/yearRate"
+                        android:text="+18%"
+                        android:textColor="@color/orange"
+                        android:textSize="@dimen/text_size_10" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="年化利率"
+                    android:textColor="@color/text_black_8"
+                    android:textSize="@dimen/text_size_11" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="0.8"
+                android:gravity="center_horizontal|bottom"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/cycle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8个月"
+                    android:textColor="@color/orange"
+                    android:textSize="@dimen/text_size_21" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="出借期限"
+                    android:textColor="@color/text_black_8"
+                    android:textSize="@dimen/text_size_11" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|bottom"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100万元"
+                    android:textColor="@color/orange"
+                    android:textSize="@dimen/text_size_21" />
+
+                <TextView
+                    android:id="@+id/invest_amount_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="出借金额"
+                    android:textColor="@color/text_black_8"
+                    android:textSize="@dimen/text_size_11" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/item_bottom_borther"
+            android:layout_width="match_parent"
+            android:layout_height="0.66dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/main_list_bother" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/bid_dfb_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_bg"
+        android:paddingBottom="8dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="8dp"
+        android:text="倒计时：225小时52分56秒"
+        android:textColor="#888888"
+        android:textSize="@dimen/text_size_11"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/bid_dfb_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.66dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/main_list_bother"
+        android:visibility="gone" />
+
+</LinearLayout>

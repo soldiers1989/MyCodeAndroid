@@ -1,0 +1,5 @@
+@media screen  and (min-width:0px) and (max-width:240px){body{font-size:xx-small;}html{font-size: 9px;}}
+@media screen  and (min-width:241px) and (max-width:384px){body{font-size:x-small;}html{font-size: 11px;}}
+@media screen  and (min-width:385px) and (max-width:480px){body{font-size:small;}html{font-size: 12px;}}
+@media screen  and  (min-width:481px) and (max-width:640){body{font-size:medium;}html{font-size: 14px;}}
+@media screen  and  (min-width:640px) {body{font-size:large;} html{font-size: 16px;}}

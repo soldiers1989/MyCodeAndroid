@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/agreementLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+    android:layout_marginRight="@dimen/activity_horizontal_margin"
+    android:layout_marginTop="@dimen/space_10"
+    android:orientation="horizontal"
+    android:visibility="gone" >
+
+    <CheckBox
+        android:id="@+id/agreementCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:background="@null"
+        android:button="@null"
+        android:checked="false"
+        android:drawableLeft="@drawable/check_box_btn"
+        android:drawablePadding="4dp"
+        android:text="@string/register_agreen"
+        android:textColor="@color/text_black_6"
+        android:textSize="@dimen/text_size_13" />
+
+    <Button
+        android:id="@+id/agreementButton"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:background="@null"
+        android:onClick="gotoProtocol"
+        android:text="@string/register_agreement"
+        android:textColor="@color/main_color"
+        android:textSize="@dimen/text_size_13" />
+
+</LinearLayout>

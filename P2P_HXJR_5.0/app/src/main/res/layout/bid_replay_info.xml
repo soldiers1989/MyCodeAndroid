@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+		android:paddingLeft="@dimen/activity_horizontal_margin"
+    	android:paddingRight="@dimen/activity_horizontal_margin"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:text="合约还款日期"
+            android:textColor="@color/text_black_8"
+            android:textSize="@dimen/text_size_12" />
+
+        <TextView 
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:textSize="@dimen/text_size_12"
+            android:textColor="@color/text_black_8"
+            android:text="状态"/>
+        <TextView 
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:textSize="@dimen/text_size_12"
+            android:textColor="@color/text_black_8"
+            android:text="科目/金额"/>
+        <TextView 
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:textSize="@dimen/text_size_12"
+            android:textColor="@color/text_black_8"
+            android:text="实际还款日期"/>
+    </LinearLayout>
+	<View 
+	    android:layout_width="match_parent"
+	    android:layout_height="0.5dp"
+	    android:background="@color/border_color"/>
+	<com.dm.widgets.InnerListView 
+	    android:id="@+id/replayListView"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+    	android:dividerHeight="0.5dp"
+    	android:divider="@color/border_color"></com.dm.widgets.InnerListView>
+</LinearLayout>

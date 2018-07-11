@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/alert_bg"
+    android:minHeight="140dp"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="12dp" >
+
+        <TextView
+            android:id="@+id/creditorRight_value_tv"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center_vertical"
+            android:text="债权价值："
+            android:textColor="@color/prompt_content_text_color" />
+
+        <TextView
+            android:id="@+id/transferRate_tv"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center_vertical"
+            android:text="转让费率："
+            android:textColor="@color/prompt_content_text_color" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/input_price_text"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/dm_input_bg"
+            android:gravity="center_vertical"
+            android:hint="请输入转让价格"
+            android:inputType="number"
+            android:maxLength="10"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:textColor="@color/prompt_content_text_color"
+            android:textColorHint="@color/text_color_hint"
+            android:textSize="@dimen/text_size_16" />
+
+        <EditText
+            android:id="@+id/input_traPwd_text"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/dm_input_bg"
+            android:gravity="center_vertical"
+            android:inputType="textPassword"
+            android:hint="请输入支付密码"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:textColor="@color/prompt_content_text_color"
+            android:textColorHint="@color/text_color_hint"
+            android:textSize="@dimen/text_size_16" 
+            android:visibility="visible"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btn_turn"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/dm_input_bg"
+        android:gravity="center"
+        android:text="转让"
+        android:textColor="@color/main_color" />
+
+    <TextView
+        android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/dm_input_bg"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/main_color" />
+
+</LinearLayout>

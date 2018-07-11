@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="bid_detail_rate_left">0dp</dimen>
+    <dimen name="bid_detail_rate_top">19dp</dimen>
+    <dimen name="bid_detail_limit_top">67dp</dimen>
+	<dimen name="bid_detail_amount_right">8dp</dimen>
+    <dimen name="bid_detail_amount_top">43dp</dimen>
+    <dimen name="bid_status_width">67dp</dimen>
+</resources>

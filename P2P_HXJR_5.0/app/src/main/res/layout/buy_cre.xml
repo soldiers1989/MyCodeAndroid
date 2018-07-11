@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_layout" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="109dp"
+        android:background="@color/main_color" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="12dp"
+            android:drawableLeft="@drawable/icon_8"
+            android:drawablePadding="2dp"
+            android:gravity="center_vertical"
+            android:text="转让金额（元）"
+            android:textColor="@color/White"
+            android:textSize="@dimen/text_size_16" />
+
+        <TextView
+            android:id="@+id/turn_ammount_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:text="@string/bid_yuan"
+            android:textColor="@color/White"
+            android:textSize="@dimen/text_size_34" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/account_available_tv"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:background="@color/White"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:text="@string/bid_buy_user_amount"
+        android:textColor="@color/text_black_6"
+        android:textSize="@dimen/text_size_16" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.66dp"
+        android:background="@color/divider_line" />
+
+    <TextView
+        android:id="@+id/buy_ammount_tv"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:background="@color/White"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:text="@string/buy_ammount_amount"
+        android:textColor="@color/text_black_6"
+        android:textSize="@dimen/text_size_16" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.66dp"
+        android:background="@color/divider_line" />
+
+    <TextView
+        android:id="@+id/expect_income_tv"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:background="@color/White"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:text="@string/expect_income_amount"
+        android:textColor="@color/text_black_6"
+        android:textSize="@dimen/text_size_16" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.66dp"
+        android:background="@color/divider_line" />
+	<include layout="@layout/agreement_layout"/>
+    <Button
+        android:id="@+id/pay_immediately_btn"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/btn_main_color_big"
+        android:gravity="center"
+        android:text="@string/bid_buy_btn"
+        android:textColor="@color/White" />
+
+</LinearLayout>

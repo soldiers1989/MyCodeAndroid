@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/space_6"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/space_6" >
+
+    <LinearLayout
+        android:id="@+id/lly_money"
+        android:layout_width="85dp"
+        android:layout_height="69dp"
+        android:background="@drawable/pic_jxq2_left"
+        android:gravity="center" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/symbol_rmb"
+            android:textColor="@color/White"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/tvw_experience_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2000"
+            android:textColor="@color/White"
+            android:textSize="@dimen/text_size_18" >
+        </TextView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="69dp"
+        android:layout_weight="1"
+        android:background="@drawable/pic_jxq2_right"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin" >
+
+        <ImageView
+            android:id="@+id/ivw_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/icon_wsy" />
+
+        <ImageView
+            android:id="@+id/ivw_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_jt3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/ivw_icon"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tvw_use"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="@dimen/space_5"
+                android:text="@string/my_reward_invest_detail"
+                android:textColor="@color/main_color"
+                android:textSize="@dimen/text_size_14" />
+
+            <TextView
+                android:id="@+id/tvw_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="使用时间：2015-02-24 18:11"
+                android:textColor="@color/text_black_8"
+                android:textSize="@dimen/text_size_11" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
