@@ -357,10 +357,10 @@ public class BankCardManageActivity extends BaseActivity
 						intent.setClass(BankCardManageActivity.this,BankCardWebActivity.class);
 						startActivityForResult(intent,1);
 					}else{
-
 						String description=result.getString("description");
 						ToastUtil.getInstant().show(BankCardManageActivity.this,description);
 					}
+					BankCardManageActivity.this.finish();
 				} catch (JSONException e) {
 					e.printStackTrace();
 				}

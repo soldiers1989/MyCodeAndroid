@@ -9,6 +9,7 @@ import android.net.http.SslError;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.webkit.CookieManager;
@@ -19,14 +20,26 @@ import android.webkit.WebSettings;
 import android.webkit.WebStorage;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.dm.http.HttpCallBack;
+import com.dm.http.HttpUtil;
 import com.dm.utils.CookieUtil;
+import com.dm.utils.DMJsonObject;
 import com.dm.utils.DMLog;
 import com.dm.widgets.utils.AlertDialogUtil;
+import com.dm.widgets.utils.ToastUtil;
+import com.hxjr.p2p.ad5.DMApplication;
 import com.hxjr.p2p.ad5.R;
-import com.hxjr.p2p.ad5.service.ApiUtil;
+import com.hxjr.p2p.ad5.bean.UserInfo;
 import com.hxjr.p2p.ad5.ui.BaseActivity;
+import com.hxjr.p2p.ad5.ui.mine.setting.TradePwdActivity;
+import com.hxjr.p2p.ad5.utils.DMConstant;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class BankCardWebActivity extends BaseActivity {
     private WebView webView;
@@ -37,6 +50,9 @@ public class BankCardWebActivity extends BaseActivity {
 
     private ProgressDialog pd;
     private Intent intent;
+    public RelativeLayout rl_pro;
+    public ProgressBar pb;
+    public TextView handle_tv;
 
     @SuppressLint("HandlerLeak")
     private Handler handler = new Handler() {
@@ -66,6 +82,9 @@ public class BankCardWebActivity extends BaseActivity {
         super.initView();
         ((TextView) findViewById(R.id.title_text)).setText(title);
         webView = (WebView) findViewById(R.id.home_banner_detail_wb);
+        rl_pro=(RelativeLayout) findViewById(R.id.rl_pro);
+        pb=(ProgressBar) findViewById(R.id.progressBar);
+        handle_tv=(TextView) findViewById(R.id.handle_tv);
         WebSettings webSettings = webView.getSettings();
         webSettings.setUseWideViewPort(true);//设置此属性，可任意比例缩放
         webSettings.setLoadWithOverviewMode(true);
@@ -126,7 +145,51 @@ public class BankCardWebActivity extends BaseActivity {
             }
             DMLog.e("onPageStarted  url", url);
             if (url.equals("view://user/center")) {
-                ApiUtil.getUserInfoWebRegister(BankCardWebActivity.this);
+                HttpUtil.getInstance().post(BankCardWebActivity.this, DMConstant.API_Url.USER_USERINFO, new
+                        HttpCallBack()
+                {
+                    @Override
+                    public void onSuccess(JSONObject result)
+                    {
+                        try
+                        {
+                            String code = result.getString("code");
+                            if (code.equals(DMConstant.ResultCode.SUCCESS))
+                            {
+                                DMJsonObject data = new DMJsonObject(result.getString("data"));
+                                UserInfo userInfo = new UserInfo(data);
+                                DMLog.e("getUserInfo------USERINFO",userInfo.toString());
+                                DMApplication.getInstance().setUserInfo(userInfo);
+                                if ("".equals(DMApplication.getInstance().getUserInfo().getUsrCustId())){
+                                    ToastUtil.getInstant().show(BankCardWebActivity.this,"注册失败，请重试！");
+                                    BankCardWebActivity.this.finish();
+                                }
+                                else{
+                                    handler1.sendEmptyMessage(MSG_UPDATE);
+//                                    Intent intent = new Intent(BankCardWebActivity.this, TradePwdActivity.class);
+//                                    BankCardWebActivity.this.startActivity(intent);
+//                                    BankCardWebActivity.this.finish();
+                                }
+                            }
+                        }
+                        catch (JSONException e)
+                        {
+                            e.printStackTrace();
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Throwable t, Context context)
+                    {
+                    }
+
+                    @Override
+                    public void onStart()
+                    {
+                        setShowProgress(false);
+                    }
+                });
+//                ApiUtil.getUserInfoWebRegister(BankCardWebActivity.this);
 //                if ("".equals(DMApplication.getInstance().getUserInfo().getUsrCustId())){
 //                    ToastUtil.getInstant().show(BankCardWebActivity.this,"注册失败，请重试！");
 //                    finish();
@@ -152,6 +215,30 @@ public class BankCardWebActivity extends BaseActivity {
             return true;
         }
     }
+
+    private int pp =0;
+    private Handler handler1 = new Handler(){
+        public void handleMessage(android.os.Message msg) {
+            if (msg.what == MSG_UPDATE) {
+                if (pp<40) {
+                    pp++;
+                    Log.e("PPPPPPPPPPPPP",""+pp);
+                    handler1.sendEmptyMessageDelayed(MSG_UPDATE, 1000);
+                    rl_pro.setVisibility(View.VISIBLE);
+                    webView.setVisibility(View.GONE);
+                    handle_tv.setText(40-pp+"请等待！！！");
+                } else {
+                    handler1.removeMessages(MSG_UPDATE);
+                    pb.setVisibility(View.GONE);
+                    Intent intent = new Intent(BankCardWebActivity.this, TradePwdActivity.class);
+                    BankCardWebActivity.this.startActivity(intent);
+                    BankCardWebActivity.this.finish();
+                }
+            }
+        };
+    };
+
+    private static final int MSG_UPDATE = 0x100;
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
