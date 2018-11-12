@@ -1,11 +1,8 @@
 package com.hxjr.p2p.ad5.service;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Handler;
-import android.util.Log;
-import android.view.View;
-import android.widget.ProgressBar;
 
 import com.dm.http.HttpCallBack;
 import com.dm.http.HttpUtil;
@@ -15,7 +12,6 @@ import com.dm.widgets.utils.ToastUtil;
 import com.hxjr.p2p.ad5.DMApplication;
 import com.hxjr.p2p.ad5.bean.Fee;
 import com.hxjr.p2p.ad5.bean.UserInfo;
-import com.hxjr.p2p.ad5.ui.mine.bank.BankCardWebActivity;
 import com.hxjr.p2p.ad5.ui.mine.setting.TradePwdActivity;
 import com.hxjr.p2p.ad5.utils.DMConstant;
 import com.hxjr.p2p.ad5.utils.HttpParams;
@@ -134,7 +130,7 @@ public class ApiUtil
 	 * @param context
 	 * @param
 	 */
-	public static void getUserInfoWebRegister(final BankCardWebActivity context)
+	public static void getUserInfoWebRegister(final Activity context)
 	{
 		HttpUtil.getInstance().post(context, DMConstant.API_Url.USER_USERINFO, new HttpCallBack()
 		{
@@ -179,9 +175,6 @@ public class ApiUtil
 			}
 		});
 	}
-
-
-
 
 	/***
 	 * 获取用户基本信息

@@ -1,6 +1,7 @@
 package com.hxjr.p2p.ad5.ui.mine.bank;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.os.Handler;
@@ -26,12 +27,14 @@ import com.dm.http.HttpCallBack;
 import com.dm.http.HttpUtil;
 import com.dm.utils.DMJsonObject;
 import com.dm.utils.DMLog;
+import com.dm.widgets.utils.AlertDialogUtil;
 import com.dm.widgets.utils.ToastUtil;
 import com.hxjr.p2p.ad5.DMApplication;
 import com.hxjr.p2p.ad5.R;
 import com.hxjr.p2p.ad5.bean.Bank;
 import com.hxjr.p2p.ad5.bean.UserInfo;
 import com.hxjr.p2p.ad5.ui.BaseActivity;
+import com.hxjr.p2p.ad5.ui.mine.setting.TradePwdActivity;
 import com.hxjr.p2p.ad5.utils.DMConstant;
 import com.hxjr.p2p.ad5.utils.ErrorUtil;
 import com.hxjr.p2p.ad5.utils.FormatUtil;
@@ -76,8 +79,6 @@ public class ThirdBankCardActivity extends BaseActivity implements View.OnClickL
     private String name;
 
     private EditText searchAdd;
-
-    private EditText et_bankUnionCode;
 
     private Button deleteBtn;
 
@@ -215,7 +216,6 @@ public class ThirdBankCardActivity extends BaseActivity implements View.OnClickL
         selectBankTv = (TextView) findViewById(R.id.select_bank_tv);
         selectProvice = (TextView) findViewById(R.id.select_province_tv);
         selectCitys = (TextView) findViewById(R.id.select_city_tv);
-        et_bankUnionCode=(EditText) findViewById(R.id.et_bankUnionCode);
         searchAdd = (EditText) findViewById(R.id.searchAdd);
         deleteBtn = (Button) findViewById(R.id.delete_btn);
         city_listview = (ListView) findViewById(R.id.city_listview);
@@ -314,7 +314,6 @@ public class ThirdBankCardActivity extends BaseActivity implements View.OnClickL
                     bankCodeNum = bankNum.get(position).get("bankNum");
                     city_listview.setVisibility(View.GONE);
                     isSearch = true;
-                    et_bankUnionCode.setText(bankCodeNum);
                     DMLog.e(bankCodeNum);
                 }
             }
@@ -348,7 +347,11 @@ public class ThirdBankCardActivity extends BaseActivity implements View.OnClickL
         switch (v.getId()) {
             case R.id.next_step_btn:
 //                submitBankInfo();
+                if ("".equals(userInfo.getUsrCustId())) {
+                    submitBankInfo();
+                } else {
                     submitAddBankInfo();
+                }
                 break;
             case R.id.select_bank_tv: {
                 UIHelper.hideSrfAndRun(this, new Runnable() {
@@ -382,6 +385,45 @@ public class ThirdBankCardActivity extends BaseActivity implements View.OnClickL
                 break;
             }
         }
+    }
+
+    /**
+     * 点击下一步，提交信息，完成添加银行卡
+     */
+    private void submitBankInfo() {
+        if (!checkParams()) {
+            return;
+        }
+        HttpParams params = new HttpParams();
+        params.put("banknumber", cardNumEt.getText().toString().trim());
+        params.put("bankId", "" + submitBankId);
+        params.put("bankNum", bankCodeNum);
+        HttpUtil.getInstance().post(this, DMConstant.API_Url.REGISTER_THIRD, params, new HttpCallBack() {
+            @Override
+            public void onSuccess(JSONObject result) {
+                try {
+                    String code = result.getString("code");
+                    if (DMConstant.ResultCode.SUCCESS.equals(code)) {
+                        // 成功
+                        ToastUtil.getInstant().show(ThirdBankCardActivity.this, R.string.add_card_success);
+                        AlertDialogUtil.alert(ThirdBankCardActivity.this, "请下一步设置交易密码", "确认", new AlertDialogUtil
+                                .AlertListener() {
+                            @Override
+                            public void doConfirm() {
+                                Intent intent = new Intent(ThirdBankCardActivity.this, TradePwdActivity
+                                        .class);
+                                startActivity(intent);
+                                finish();
+                            }
+                        });
+                    } else {
+                        ErrorUtil.showError(result);
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
     }
 
     /**
@@ -431,13 +473,8 @@ public class ThirdBankCardActivity extends BaseActivity implements View.OnClickL
             return false;
         }
         if (bankCodeNum == null) {
-            if ("".equals(et_bankUnionCode.getText().toString())|| null==et_bankUnionCode.getText().toString()){
-                ToastUtil.getInstant().show(this, "请搜索您银行卡开户行或手动填写银联号");
-                return false;
-            }else{
-                bankCodeNum=et_bankUnionCode.getText().toString().trim();
-                return true;
-            }
+            ToastUtil.getInstant().show(this, "请搜索您银行卡开户行");
+            return false;
         }
         return true;
     }

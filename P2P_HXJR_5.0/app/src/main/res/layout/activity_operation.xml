@@ -285,7 +285,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="累计为用户赚取"
+                    android:text="为用户带来收益"
                     android:textColor="@color/op_type"
                     android:textSize="@dimen/text_size_12"/>
             </LinearLayout>

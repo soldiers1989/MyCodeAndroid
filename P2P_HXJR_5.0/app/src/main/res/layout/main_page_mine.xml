@@ -765,7 +765,7 @@
                     android:paddingRight="@dimen/activity_horizontal_margin"
                     android:text="@string/account_newcomer_bigin"
                     android:textColor="@color/text_black_6"
-                    android:textSize="@dimen/text_size_15"/>
+                    android:textSize="@dimen/text_size_15" />
 
                 <View
                     android:layout_width="match_parent"

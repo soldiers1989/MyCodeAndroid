@@ -292,15 +292,7 @@ public class BankCardManageActivity extends BaseActivity
 			{
 				if (checkClick(v.getId())) //防重复点击	
 				{
-					if ("".equals(DMApplication.getInstance().getUserInfo().getUsrCustId())){
-						postPayRegister(DMConstant.API_Url.PAY_USER_REGISTERN,new HttpParams());
-					}
-					else{
-						Intent intent = new Intent(BankCardManageActivity.this, ThirdBankCardActivity.class);
-						startActivity(intent);
-						finish();
-					}
-
+					postPayRegister(DMConstant.API_Url.PAY_USER_REGISTERN,new HttpParams());
 //					if (checkSecurityInfo())
 //					{
 //						Intent intent = new Intent(BankCardManageActivity.this, BankCardWebActivity.class);
@@ -317,14 +309,7 @@ public class BankCardManageActivity extends BaseActivity
 			@Override
 			public void onClick(View v)
 			{
-				if ("".equals(DMApplication.getInstance().getUserInfo().getUsrCustId())){
-					postPayRegister(DMConstant.API_Url.PAY_USER_REGISTERN,new HttpParams());
-				}
-				else{
-					Intent intent = new Intent(BankCardManageActivity.this, ThirdBankCardActivity.class);
-					startActivity(intent);
-					finish();
-				}
+				postPayRegister(DMConstant.API_Url.PAY_USER_REGISTERN,new HttpParams());
 //				UserInfo userInfo = DMApplication.getInstance().getUserInfo();
 //				if (UIHelper.hasCompletedSecurityInfo(BankCardManageActivity.this, userInfo, isNeedEmailRZ, isNeedPsw))
 //				{
@@ -339,9 +324,7 @@ public class BankCardManageActivity extends BaseActivity
 	{
 		HttpUtil.getInstance().post(BankCardManageActivity.this, url, params, new HttpCallBack()
 		{
-
-
-
+			
 			@Override
 			public void onSuccess(JSONObject result) {
 				try {
@@ -360,7 +343,6 @@ public class BankCardManageActivity extends BaseActivity
 						String description=result.getString("description");
 						ToastUtil.getInstant().show(BankCardManageActivity.this,description);
 					}
-					BankCardManageActivity.this.finish();
 				} catch (JSONException e) {
 					e.printStackTrace();
 				}

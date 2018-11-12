@@ -190,17 +190,7 @@
                 </FrameLayout>
             </LinearLayout>
 
-            <EditText
-                android:id="@+id/et_bankUnionCode"
-                android:layout_width="match_parent"
-                android:layout_marginTop="@dimen/space_10"
-                android:layout_height="40dp"
-                android:background="@drawable/recharg_input_bg"
-                android:hint="搜索不到时，请在这里输入银联号！"
-                android:paddingLeft="8dp"
-                android:paddingRight="8dp"
-                android:textColor="@color/text_black_6"
-                android:textSize="@dimen/text_size_16"/>
+
 
             <Button
                 android:id="@+id/next_step_btn"

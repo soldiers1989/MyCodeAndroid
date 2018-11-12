@@ -17,7 +17,6 @@ import android.widget.TextView;
 import com.dm.http.HttpCallBack;
 import com.dm.http.HttpUtil;
 import com.dm.utils.DMJsonObject;
-import com.dm.utils.DMLog;
 import com.hxjr.p2p.ad5.R;
 import com.hxjr.p2p.ad5.ui.BaseActivity;
 import com.hxjr.p2p.ad5.utils.DMConstant;
@@ -138,7 +137,6 @@ public class NewsDetailActivity extends BaseActivity
 					if (DMConstant.ResultCode.SUCCESS.equals(code))
 					{
 						DMJsonObject dataObj = new DMJsonObject(result.getString("data"));
-						DMLog.e(dataObj.toString());
 						title.setText(dataObj.getString("title"));
 						time.setText("发布时间 : " + dataObj.getString("releaseTime"));
 						String sourceStr =
