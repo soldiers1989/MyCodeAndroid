@@ -33,8 +33,8 @@ public interface DMConstant
 		 * 平台服务器接口地址
 		 */
 //		String PLATA_URL = PROTOCOL + "112.95.233.249:5118/app/";  //苏
-//		String PLATA_URL = PROTOCOL + "101.200.139.68/app/";  //测试环境
-		String PLATA_URL = PROTOCOL + "www.todayfu.com/app/";
+		String PLATA_URL = PROTOCOL + "101.200.139.68/app/";  //测试环境
+//		String PLATA_URL = PROTOCOL + "www.todayfu.com/app/";
 
 		/**
 		 * 是否由托管方处理银行卡添加和删除操作

@@ -479,7 +479,7 @@
 
     <!-- 我的账户界面string -->
     <string name="account_hello">你好，赚不够 !</string>
-    <string name="account_bid_total_income">出借总收益(元)</string>
+    <string name="account_bid_total_income">出借总收入(元)</string>
     <string name="account_in_bid_money">出借中的金额(元)：</string>
     <string name="account_total_bid">净资产（元）</string>
     <string name="account_available_balance">可用余额（元）</string>
