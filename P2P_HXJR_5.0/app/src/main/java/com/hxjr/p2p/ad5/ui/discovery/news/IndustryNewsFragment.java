@@ -1,12 +1,5 @@
 package com.hxjr.p2p.ad5.ui.discovery.news;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,14 +11,6 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 
-import com.hxjr.p2p.ad5.bean.News;
-import com.hxjr.p2p.ad5.ui.discovery.news.adapter.NewsAdapter;
-import com.hxjr.p2p.ad5.utils.DMConstant;
-import com.hxjr.p2p.ad5.utils.ErrorUtil;
-import com.hxjr.p2p.ad5.utils.HttpParams;
-import com.hxjr.p2p.ad5.utils.NetConnectErrorManager;
-import com.hxjr.p2p.ad5.utils.NetConnectErrorManager.NetConnetCallBack;
-import com.hxjr.p2p.ad5.R;
 import com.dm.http.DMException;
 import com.dm.http.HttpCallBack;
 import com.dm.http.HttpUtil;
@@ -33,6 +18,21 @@ import com.dm.utils.DMJsonObject;
 import com.dm.widgets.DMListView;
 import com.dm.widgets.DMListView.OnMoreListener;
 import com.dm.widgets.DMSwipeRefreshLayout;
+import com.hxjr.p2p.ad5.R;
+import com.hxjr.p2p.ad5.bean.News;
+import com.hxjr.p2p.ad5.ui.discovery.news.adapter.NewsAdapter;
+import com.hxjr.p2p.ad5.utils.DMConstant;
+import com.hxjr.p2p.ad5.utils.ErrorUtil;
+import com.hxjr.p2p.ad5.utils.HttpParams;
+import com.hxjr.p2p.ad5.utils.NetConnectErrorManager;
+import com.hxjr.p2p.ad5.utils.NetConnectErrorManager.NetConnetCallBack;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 行业资讯
@@ -72,12 +72,12 @@ public class IndustryNewsFragment extends Fragment implements OnRefreshListener,
 		dmSwipeRefreshLayout = (DMSwipeRefreshLayout)mView.findViewById(R.id.dmSwipeRefreshLayout);
 		dmSwipeRefreshLayout.setOnRefreshListener(this);
 		mListView = (DMListView)mView.findViewById(R.id.newsListView);
-		mListView.setEmptyText("暂时没有行业资讯！");
+		mListView.setEmptyText("暂时没有运营报告！");
 		mListView.setOnMoreListener(this);
 		context = getActivity();
 		mListView.setOnItemClickListener(new OnItemClickListener()
 		{
-			
+
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id)
 			{
@@ -85,9 +85,9 @@ public class IndustryNewsFragment extends Fragment implements OnRefreshListener,
 				if (news != null)
 				{
 					Intent intent = new Intent(context, NewsDetailActivity.class);
-					intent.putExtra("title", "行业资讯");
+					intent.putExtra("title", "运营报告");
 					intent.putExtra("noticeId", news.getId());
-					intent.putExtra("newsType", "WDHYZX");// 网贷行业资讯
+					intent.putExtra("newsType", "YYBG");// 运营报告
 					getActivity().startActivity(intent);
 				}
 			}
@@ -129,7 +129,7 @@ public class IndustryNewsFragment extends Fragment implements OnRefreshListener,
 		HttpParams httpParams = new HttpParams();
 		httpParams.put("pageIndex", postPage);
 		httpParams.put("pageSize", DMConstant.DigitalConstant.PAGE_SIZE);
-		httpParams.put("type", "WDHYZX");// 网贷行业资讯
+		httpParams.put("type", "YYBG");// 运营报告
 		
 		HttpUtil.getInstance().post(getContext(), DMConstant.API_Url.ARTICLE_LIST, httpParams, new HttpCallBack()
 		{

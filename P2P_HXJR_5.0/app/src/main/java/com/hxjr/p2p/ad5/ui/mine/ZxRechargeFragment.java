@@ -39,6 +39,7 @@ import com.hxjr.p2p.ad5.bean.UserInfo;
 import com.hxjr.p2p.ad5.service.ApiUtil;
 import com.hxjr.p2p.ad5.ui.mine.bank.BankCardManageActivity;
 import com.hxjr.p2p.ad5.ui.mine.bank.BankCardWebActivity;
+import com.hxjr.p2p.ad5.ui.mine.bank.PayNumActivity;
 import com.hxjr.p2p.ad5.ui.mine.setting.SecurityInfoActivity;
 import com.hxjr.p2p.ad5.ui.mine.setting.TradePwdActivity;
 import com.hxjr.p2p.ad5.utils.DMConstant;
@@ -277,6 +278,22 @@ public class ZxRechargeFragment extends Fragment implements View.OnClickListener
                             DMJsonObject dmJsonObject = new DMJsonObject(data.get(0).toString());
                             bankCard = new BankCard(dmJsonObject);
                             bankNum.setText(bankCard.getBankNumber());
+                            if (null==bankCard.getBankUnionCode()||bankCard.getBankUnionCode().equals("")){
+                                AlertDialogUtil.confirm(getActivity(),"请输入银联号码",new AlertDialogUtil.ConfirmListener(){
+                                    @Override
+                                    public void onOkClick() {
+                                        Intent intent=new Intent();
+                                        intent.setClass(getActivity(), PayNumActivity.class);
+                                        startActivity(intent);
+                                    }
+
+                                    @Override
+                                    public void onCancelClick() {
+                                        ToastUtil.getInstant().show(getActivity(),"银联号未更新！");
+                                        getActivity().finish();
+                                    }
+                                });
+                            }
                         }
                     } else {
                         ErrorUtil.showError(result);

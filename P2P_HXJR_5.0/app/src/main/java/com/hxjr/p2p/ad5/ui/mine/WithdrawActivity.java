@@ -50,7 +50,7 @@ import com.hxjr.p2p.ad5.bean.YbFee;
 import com.hxjr.p2p.ad5.service.ApiUtil;
 import com.hxjr.p2p.ad5.service.ApiUtil.OnPostCallBack;
 import com.hxjr.p2p.ad5.ui.BaseActivity;
-import com.hxjr.p2p.ad5.ui.mine.bank.BankCardWebActivity;
+import com.hxjr.p2p.ad5.ui.mine.bank.BankCardManageActivity;
 import com.hxjr.p2p.ad5.ui.mine.bank.PayNumActivity;
 import com.hxjr.p2p.ad5.ui.mine.setting.FindTradePwdActivity;
 import com.hxjr.p2p.ad5.ui.tg.TgThirdWebActivity;
@@ -295,7 +295,7 @@ public class WithdrawActivity extends BaseActivity implements OnClickListener {
                 if (checkClick(v.getId())) //防重复点击
                 {
                     if (checkSecurityInfo()) {
-                        Intent intent = new Intent(WithdrawActivity.this, BankCardWebActivity.class);
+                        Intent intent = new Intent(WithdrawActivity.this, BankCardManageActivity.class);
                         startActivityForResult(intent, DMConstant.RequestCodes.REQUEST_CODE_SECURITY);
                         //						httpParams = new HttpParams();
                         //						post(DMConstant.API_Url.PAY_BIND_CARD, httpParams, YB_CODE_BIND_CARD);
@@ -729,7 +729,7 @@ public class WithdrawActivity extends BaseActivity implements OnClickListener {
         view.setTag(i);
         view.setOnClickListener(this);
         DMLog.e(bankCard.toString());
-        if (null==bankCard.getBankUnionCode()||bankCard.getBankUnionCode()==""){
+        if (null==bankCard.getBankUnionCode()||bankCard.getBankUnionCode().equals("")){
             AlertDialogUtil.confirm(WithdrawActivity.this,"请输入银联号码",new AlertDialogUtil.ConfirmListener(){
                 @Override
                 public void onOkClick() {
